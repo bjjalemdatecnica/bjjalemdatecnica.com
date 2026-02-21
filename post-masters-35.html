@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Como Treinar 4x Por Semana Depois dos 35 Sem Se Quebrar — BJJ Além da Técnica</title>
+<meta name="description" content="A matemática é simples: 208 treinos leves por ano valem mais do que 104 treinos pesados interrompidos por lesões.">
+<meta property="og:title" content="Como Treinar 4x Por Semana Depois dos 35 Sem Se Quebrar">
+<meta property="og:description" content="A matemática é simples: 208 treinos leves por ano valem mais do que 104 treinos pesados interrompidos por lesões.">
+<meta property="og:url" content="https://bjjalemdatecnica.com/post-masters-35.html">
+<meta property="og:type" content="article">
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Crimson+Pro:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Share+Tech+Mono&display=swap" rel="stylesheet">
+<style>
+
+  :root {
+    --black: #0a0a0a; --deep: #111111; --surface: #1a1a1a; --card: #1e1e1e;
+    --red: #c0392b; --red-hot: #e74c3c; --red-dim: #7b1a13;
+    --gray: #888; --light: #cccccc; --white: #f0f0f0;
+    --mono: 'Share Tech Mono', monospace;
+    --display: 'Bebas Neue', sans-serif;
+    --body: 'Crimson Pro', serif;
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body { background: var(--black); color: var(--light); font-family: var(--body); font-size: 18px; line-height: 1.7; overflow-x: hidden; }
+  body::before { content: ''; position: fixed; inset: 0; background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.04'/%3E%3C/svg%3E"); pointer-events: none; z-index: 999; opacity: 0.4; }
+  nav { position: fixed; top: 0; width: 100%; z-index: 100; padding: 12px 48px; display: flex; justify-content: space-between; align-items: center; background: linear-gradient(to bottom, rgba(10,10,10,0.98), transparent); backdrop-filter: blur(4px); }
+  .nav-logo { display: flex; align-items: center; gap: 12px; text-decoration: none; }
+  .nav-logo img { height: 52px; width: auto; }
+  .nav-logo-text { font-family: var(--display); font-size: 1.1rem; letter-spacing: 0.1em; color: var(--white); line-height: 1.1; }
+  .nav-logo-text span { color: var(--red); display: block; }
+  .nav-links { display: flex; gap: 36px; list-style: none; }
+  .nav-links a { font-family: var(--mono); font-size: 0.75rem; letter-spacing: 0.15em; color: var(--gray); text-decoration: none; text-transform: uppercase; transition: color 0.2s; }
+  .nav-links a:hover { color: var(--red); }
+  .red-divider { width: 100%; height: 1px; background: linear-gradient(to right, transparent, var(--red-dim), transparent); }
+  footer { background: var(--deep); border-top: 1px solid rgba(192,57,43,0.2); padding: 60px 48px 40px; }
+  footer > div { max-width: 1200px; margin: 0 auto; display: flex; justify-content: space-between; align-items: flex-start; gap: 40px; flex-wrap: wrap; }
+  .footer-logo img { height: 64px; width: auto; margin-bottom: 12px; display: block; }
+  .footer-logo p { font-size: 0.9rem; color: var(--gray); font-style: italic; max-width: 280px; }
+  .footer-links h4 { font-family: var(--mono); font-size: 0.65rem; letter-spacing: 0.2em; color: var(--red); text-transform: uppercase; margin-bottom: 16px; }
+  .footer-links ul { list-style: none; }
+  .footer-links li { margin-bottom: 10px; }
+  .footer-links a { font-size: 0.9rem; color: var(--gray); text-decoration: none; transition: color 0.2s; }
+  .footer-links a:hover { color: var(--white); }
+  .footer-bottom { max-width: 1200px; margin: 40px auto 0; padding-top: 24px; border-top: 1px solid rgba(255,255,255,0.05); font-family: var(--mono); font-size: 0.65rem; color: rgba(136,136,136,0.4); letter-spacing: 0.1em; display: flex; justify-content: space-between; flex-wrap: wrap; gap: 12px; }
+  @keyframes fadeUp { from { opacity: 0; transform: translateY(24px); } to { opacity: 1; transform: translateY(0); } }
+  .reveal { opacity: 0; transform: translateY(32px); transition: opacity 0.7s ease, transform 0.7s ease; }
+  .reveal.visible { opacity: 1; transform: translateY(0); }
+  @media (max-width: 768px) { nav { padding: 12px 24px; } .nav-links { display: none; } footer { padding: 40px 24px 24px; } }
+
+
+  .post-layout { display: grid; grid-template-columns: 1fr 320px; gap: 60px; max-width: 1200px; margin: 0 auto; padding: 120px 48px 80px; align-items: start; }
+  .post-main {}
+  .post-header { margin-bottom: 48px; }
+  .post-tag { font-family: var(--mono); font-size: 0.65rem; letter-spacing: 0.2em; color: var(--red); text-transform: uppercase; margin-bottom: 20px; display: block; }
+  .post-title { font-family: var(--display); font-size: clamp(2.4rem, 5vw, 4.5rem); color: var(--white); letter-spacing: 0.02em; line-height: 0.95; margin-bottom: 24px; }
+  .post-meta { font-family: var(--mono); font-size: 0.65rem; color: rgba(136,136,136,0.6); letter-spacing: 0.1em; display: flex; gap: 24px; margin-bottom: 40px; }
+  .post-divider { width: 60px; height: 2px; background: var(--red); margin-bottom: 40px; }
+  .post-body { font-size: 1.1rem; line-height: 1.85; color: var(--light); }
+  .post-body p { margin-bottom: 1.4em; }
+  .post-body h2 { font-family: var(--display); font-size: 2rem; color: var(--white); letter-spacing: 0.04em; margin: 2.5em 0 0.8em; line-height: 1; }
+  .post-body strong { color: var(--white); font-weight: 600; }
+  .post-body em { font-style: italic; color: var(--gray); }
+  .post-share { margin-top: 60px; padding-top: 40px; border-top: 1px solid rgba(255,255,255,0.08); }
+  .post-share h3 { font-family: var(--mono); font-size: 0.7rem; letter-spacing: 0.2em; color: var(--red); text-transform: uppercase; margin-bottom: 20px; }
+  .share-buttons { display: flex; gap: 12px; flex-wrap: wrap; }
+  .share-btn { display: inline-flex; align-items: center; gap: 8px; padding: 10px 20px; font-family: var(--mono); font-size: 0.7rem; letter-spacing: 0.12em; text-transform: uppercase; text-decoration: none; border: 1px solid rgba(255,255,255,0.12); color: var(--gray); cursor: pointer; background: none; transition: all 0.2s; }
+  .share-btn:hover { border-color: var(--red); color: var(--red); }
+  .back-link { display: inline-flex; align-items: center; gap: 8px; font-family: var(--mono); font-size: 0.7rem; letter-spacing: 0.15em; color: var(--gray); text-decoration: none; text-transform: uppercase; margin-bottom: 48px; transition: color 0.2s; }
+  .back-link:hover { color: var(--red); }
+  /* SIDEBAR */
+  .post-sidebar { position: sticky; top: 100px; }
+  .sidebar-section { margin-bottom: 48px; }
+  .sidebar-title { font-family: var(--mono); font-size: 0.65rem; letter-spacing: 0.2em; color: var(--red); text-transform: uppercase; margin-bottom: 20px; padding-bottom: 12px; border-bottom: 1px solid rgba(192,57,43,0.3); }
+  .sidebar-post { display: block; padding: 16px 0; border-bottom: 1px solid rgba(255,255,255,0.05); text-decoration: none; transition: padding-left 0.2s; }
+  .sidebar-post:hover { padding-left: 8px; }
+  .sidebar-post-tag { font-family: var(--mono); font-size: 0.6rem; letter-spacing: 0.15em; color: var(--red); text-transform: uppercase; margin-bottom: 6px; }
+  .sidebar-post-title { font-family: var(--display); font-size: 1.1rem; color: var(--white); letter-spacing: 0.02em; line-height: 1.15; margin-bottom: 6px; }
+  .sidebar-post.active .sidebar-post-title { color: var(--gray); }
+  .sidebar-post-date { font-family: var(--mono); font-size: 0.6rem; color: rgba(136,136,136,0.5); letter-spacing: 0.1em; }
+  .sidebar-yt { display: block; background: var(--card); padding: 20px; text-decoration: none; border: 1px solid rgba(192,57,43,0.2); transition: border-color 0.2s; }
+  .sidebar-yt:hover { border-color: var(--red); }
+  .sidebar-yt-label { font-family: var(--mono); font-size: 0.65rem; letter-spacing: 0.15em; color: var(--red); text-transform: uppercase; margin-bottom: 8px; }
+  .sidebar-yt-text { font-size: 0.9rem; color: var(--light); }
+  @media (max-width: 900px) { .post-layout { grid-template-columns: 1fr; padding: 100px 24px 60px; } .post-sidebar { display: none; } }
+
+</style>
+</head>
+<body>
+
+<nav>
+  <a href="index.html" class="nav-logo">
+    <img src="LOGO.png" alt="BJJ Além da Técnica">
+    <div class="nav-logo-text">BJJ <span>Além da Técnica</span></div>
+  </a>
+  <ul class="nav-links">
+    <li><a href="index.html#canal">Canal</a></li>
+    <li><a href="index.html#blog">Blog</a></li>
+    <li><a href="index.html#patrocinadores">Patrocinadores</a></li>
+    <li><a href="index.html#sugestoes">Sugestões</a></li>
+  </ul>
+</nav>
+
+<div class="post-layout">
+  <main class="post-main">
+    <a href="index.html#blog" class="back-link">← Voltar para o Blog</a>
+    <header class="post-header">
+      <span class="post-tag">Mentalidade • Masters</span>
+      <h1 class="post-title">Como Treinar 4x Por Semana Depois dos 35 Sem Se Quebrar</h1>
+      <div class="post-meta">
+        <span>Fevereiro 2025</span>
+        <span>10 min de leitura</span>
+      </div>
+      <div class="post-divider"></div>
+    </header>
+    <div class="post-body">
+      
+<p>Você tem mais de 35 anos, quer treinar Jiu-jitsu mais vezes na semana, mas sempre acaba lesionado? Ou então treina pesado uns dois dias e passa o resto da semana se recuperando?</p>
+<p>Tenho uma notícia: você provavelmente está treinando <strong>errado</strong>.</p>
+<p>Olha essa matemática simples: se você treinar 4 vezes por semana o ano inteiro, faz 208 treinos no ano. Mas se treinar pesado 2 vezes, se lesionar, tirar semanas pra recuperar... no final das contas treina só 104 vezes. <strong>Metade.</strong></p>
+<p>Hoje você vai aprender a treinar mais treinando menos intenso. Parece contraditório? Não é. É inteligência.</p>
+
+<h2>A Mentalidade Errada</h2>
+<p>A maioria dos praticantes mais velhos comete o mesmo erro: treina como se cada rola fosse final de campeonato mundial. Aquece mal, parte pro rola pesado, força, explode, resiste até o último segundo.</p>
+<p>No dia seguinte? Corpo todo quebrado. Costela doendo. Joelho inchado. Pescoço travado. Resultado: uma semana fora. Volta, repete. Se machuca de novo.</p>
+<p>O problema é que treinamos com mentalidade de moleque de 20 anos, mas com corpo de 40. Moleque pode treinar pesado todo dia, dormir 4 horas, comer porcaria — e no dia seguinte está 100%. Você com 35, 40, 50? Não tem mais esse luxo.</p>
+<p>Aceita logo: você não é mais moleque. E tá tudo bem. Porque a boa notícia é que você não precisa treinar como moleque pra evoluir. Na verdade, vai evoluir mais treinando inteligente.</p>
+
+<h2>Regra 1: Escolha Bem Com Quem Você Rola</h2>
+<p>A regra mais importante de todas. Existem três tipos que você deve evitar ao máximo:</p>
+<p><strong>O Gorila</strong> — usa força bruta pra tudo, não tem técnica, te esmaga com pressão, vai do zero ao cem sem controle. Fuja. Ele vai te machucar — não é questão de se, é questão de quando.</p>
+<p><strong>O Estabanado</strong> — geralmente faixa branca novo, movimentos descontrolados, cotovelo voando, joelho batendo na sua cara. Não tem maldade, mas não tem consciência corporal. Isso é perigoso pra quem tem 40 anos.</p>
+<p><strong>O Competidor Frustrado</strong> — não compete mais, mas treina todo treino como se fosse campeonato. Quer te dominar a qualquer custo. Esse é o pior, porque tem técnica — e usa ela pra te quebrar.</p>
+<p>Com quem você deve treinar? Faixas graduadas com controle (roxo, marrom, preta), azuis veteranos, masters da sua idade, e mulheres — que geralmente têm técnica superior e te forçam a usar a técnica também.</p>
+<p>Você não precisa ser grosso pra comunicar isso. Só seja honesto: <em>"Cara, tô voltando de lesão, vamos fazer um flow?"</em> Qualquer faixa graduada vai entender.</p>
+
+<h2>Regra 2: Não Faça Todos os Rolas</h2>
+<p>Isso vai parecer heresia, mas você não precisa fazer todos os rolas da noite.</p>
+<p>Cenário A: treina 2x por semana, faz todos os rolas (5 ou 6), se quebra, fica 2 semanas fora. Cenário B: treina 4x por semana, faz 2 ou 3 rolas por treino, corpo aguenta, continua treinando com consistência.</p>
+<p>O resultado? No cenário B você faz a mesma quantidade de rolas por semana, mas com o dobro de exposição à técnica, ao ritmo, ao Jiu-jitsu. Isso é matemática, não opinião.</p>
+<p>E se você está dolorido mas quer treinar? Flow roll é seu amigo. Sem força, sem explosão — só movimento e técnica. Você treina, mantém consistência, não se machuca.</p>
+
+<h2>Regra 3: Treine Mesmo Dolorido (Mas Inteligente)</h2>
+<p>Tem diferença entre dor de músculo e lesão estrutural. Dor muscular — vai treinar. Lesão — para.</p>
+<p>Quando você fica uma semana fora "pra recuperar" de uma simples dor muscular, você desacostuma. Fica mais difícil voltar. Perde ritmo. Perde gás.</p>
+<p>A regra de ouro: se dói pra <em>mover</em>, é lesão — para. Se dói pra <em>parar</em>, é dor muscular — treina light. Aprende a diferença. Seu corpo sabe. Escute ele.</p>
+<p>E adapte o treino: joelho doendo? Foca guarda sentada. Ombro zuado? Evita kimura e omoplata, trabalha escape de outras finalizações. Você tem opções.</p>
+
+<h2>Regra 4: Musculação É Obrigatória</h2>
+<p>Se você tem mais de 35 e quer treinar consistentemente, musculação não é opcional. É obrigatória.</p>
+<p>O Jiu-jitsu sozinho não constrói força estrutural — ele usa o que você já tem. E depois dos 35, você perde massa muscular naturalmente. É biologia.</p>
+<p>Você não precisa virar fisiculturista. Treino funcional básico já resolve: agachamento, supino ou flexão, remada, desenvolvimento, prancha — 2 a 3 vezes por semana. Quem faz musculação aguenta mais pressão, se lesiona menos e rola melhor.</p>
+
+<h2>Regra 5: Recuperação É Treino Também</h2>
+<p>Recuperação não é descanso. É treino de recuperação.</p>
+<p>Sauna depois do treino é mágica: 15 a 20 minutos aumenta circulação, relaxa músculo, acelera recuperação. Melhor ainda: contraste térmico — sauna mais banho frio.</p>
+<p>Alongamento e mobilidade todo dia, 10 a 15 minutos. Quadril, ombros, pescoço, lombar. Isso sozinho reduz 50% das lesões. Durma 7 a 8 horas. Coma proteína. Tome água. Parece óbvio? É. Mas ninguém faz.</p>
+<p>Quando você adota todos esses protocolos, passa a viver o que a galera chama de Jiu-jitsu Lifestyle. Não te custa nada, te faz um bem danado — e o resultado aparece rápido, tanto na sua vida quanto na sua evolução nos treinos.</p>
+
+<h2>Conclusão</h2>
+<p>Para treinar 4x por semana depois dos 35 sem se quebrar: escolha bem com quem rola, não faça todos os rolas, treine mesmo dolorido mas adapte, faça musculação e invista em recuperação.</p>
+<p>Consistência sempre vence intensidade. 208 treinos light por ano são sempre melhores que 104 treinos pesados. Você não precisa rolar como final de campeonato pra evoluir — precisa rolar com cérebro.</p>
+<p>Se você fizer isso direitinho, daqui 5 anos vai ser faixa roxa ou marrom rolando tranquilo 4 vezes por semana. Enquanto o cara que treina igual moleque vai estar na fisioterapia reclamando que Jiu-jitsu machuca muito.</p>
+<p>A escolha é sua.</p>
+<p><em>OSS.</em></p>
+
+    </div>
+    <div class="post-share">
+      <h3>Compartilhar este post</h3>
+      <div class="share-buttons">
+        <a href="https://wa.me/?text=Como Treinar 4x Por Semana Depois dos 35 Sem Se Quebrar%20https://bjjalemdatecnica.com/post-masters-35.html" target="_blank" class="share-btn">📱 WhatsApp</a>
+        <a href="https://twitter.com/intent/tweet?text=Como Treinar 4x Por Semana Depois dos 35 Sem Se Quebrar&url=https://bjjalemdatecnica.com/post-masters-35.html" target="_blank" class="share-btn">𝕏 Twitter</a>
+        <button class="share-btn" onclick="navigator.clipboard.writeText('https://bjjalemdatecnica.com/post-masters-35.html');this.textContent='✓ Copiado!'">🔗 Copiar link</button>
+      </div>
+    </div>
+  </main>
+  <aside class="post-sidebar">
+<div class="sidebar-section">
+<div class="sidebar-title">Outros Posts</div>
+<a href="post-roger-gracie.html" class="sidebar-post">
+<div class="sidebar-post-tag">História • Inspiração</div>
+<div class="sidebar-post-title">O GOAT Que Ninguém Apostava: A História Real de Roger Gracie</div>
+<div class="sidebar-post-date">Janeiro 2025 · 12 min</div>
+</a>
+<a href="post-abu-dhabi.html" class="sidebar-post">
+<div class="sidebar-post-tag">Filosofia • Política Esportiva</div>
+<div class="sidebar-post-title">E Se Jiu-jitsu Fosse Obrigatório no Brasil? A Lição de Abu Dhabi</div>
+<div class="sidebar-post-date">Dezembro 2024 · 12 min</div>
+</a>
+</div>
+<div class="sidebar-section">
+<div class="sidebar-title">Canal no YouTube</div>
+<a href="https://www.youtube.com/@BJJAlemDaTecnica" target="_blank" class="sidebar-yt">
+<div class="sidebar-yt-label">▶ Assista também</div>
+<div class="sidebar-yt-text">Novos vídeos toda semana no canal BJJ Além da Técnica</div>
+</a>
+</div>
+</aside>
+
+</div>
+<div class="red-divider"></div>
+
+<footer>
+  <div>
+    <div class="footer-logo">
+      <img src="LOGO.png" alt="BJJ Além da Técnica">
+      <p>O tatame como escola de vida. Técnica, filosofia e tudo que está além do movimento.</p>
+    </div>
+    <div class="footer-links">
+      <h4>Navegação</h4>
+      <ul>
+        <li><a href="index.html#canal">Último Vídeo</a></li>
+        <li><a href="index.html#blog">Blog</a></li>
+        <li><a href="index.html#patrocinadores">Patrocinadores</a></li>
+        <li><a href="index.html#sugestoes">Sugestões</a></li>
+      </ul>
+    </div>
+    <div class="footer-links">
+      <h4>Contato</h4>
+      <ul>
+        <li><a href="https://www.youtube.com/@BJJAlemDaTecnica" target="_blank">YouTube</a></li>
+        <li><a href="mailto:contato@bjjalemdatecnica.com">contato@bjjalemdatecnica.com</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span>© 2025 BJJ Além da Técnica — bjjalemdatecnica.com</span>
+    <span>OSS</span>
+  </div>
+</footer>
+<script>
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(el => { if (el.isIntersecting) el.target.classList.add('visible'); });
+  }, { threshold: 0.1 });
+  document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+</script>
+
+</body>
+</html>
