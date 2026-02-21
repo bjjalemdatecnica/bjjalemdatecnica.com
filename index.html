@@ -5,14 +5,12 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>BJJ Além da Técnica</title>
 <meta name="description" content="Canal brasileiro de Jiu-jitsu que vai além da técnica. Posts sobre filosofia, mentalidade, história e treino inteligente para praticantes de todos os níveis.">
-<meta name="keywords" content="jiu-jitsu, BJJ, blog jiu-jitsu, treino jiu-jitsu, filosofia jiu-jitsu, história BJJ, Roger Gracie, masters BJJ, treino depois dos 35">
+<meta name="keywords" content="jiu-jitsu, BJJ, blog jiu-jitsu, treino jiu-jitsu, filosofia jiu-jitsu, Roger Gracie, masters BJJ, treino depois dos 35">
 <meta name="author" content="BJJ Além da Técnica">
-<meta property="og:title" content="BJJ Além da Técnica — Jiu-jitsu Além do Movimento">
-<meta property="og:description" content="Canal brasileiro de Jiu-jitsu que vai além da técnica. Posts sobre filosofia, mentalidade, história e treino inteligente.">
+<meta property="og:title" content="BJJ Além da Técnica">
+<meta property="og:description" content="Jiu-jitsu além do movimento. Técnica, filosofia e mentalidade.">
 <meta property="og:url" content="https://bjjalemdatecnica.com">
-<meta property="og:type" content="website">
 <meta property="og:image" content="https://bjjalemdatecnica.com/LOGO.png">
-<meta name="twitter:card" content="summary_large_image">
 <link rel="canonical" href="https://bjjalemdatecnica.com">
 <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Crimson+Pro:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Share+Tech+Mono&display=swap" rel="stylesheet">
 <style>
@@ -257,7 +255,7 @@
         <div class="sponsor-name" style="color: var(--gray);">Sua Marca Aqui</div>
         <div class="sponsor-category">Em Aberto</div>
         <p class="sponsor-desc">Quer patrocinar o canal e alcançar uma audiência engajada de praticantes? Entre em contato.</p>
-        <a href="/cdn-cgi/l/email-protection#1f7c70716b7e6b705f7d75757e737a727b7e6b7a7c71767c7e317c7072" class="sponsor-link"><span class="__cf_email__" data-cfemail="86e5e9e8f2e7f2e9c6e4ecece7eae3ebe2e7f2e3e5e8efe5e7a8e5e9eb">[email&#160;protected]</span> →</a>
+        <a href="mailto:contato@bjjalemdatecnica.com" class="sponsor-link">contato@bjjalemdatecnica.com →</a>
       </div>
     </div>
   </div>
@@ -323,7 +321,7 @@
       <h4>Contato</h4>
       <ul>
         <li><a href="https://www.youtube.com/@BJJAlemDaTecnica" target="_blank">YouTube</a></li>
-        <li><a href="/cdn-cgi/l/email-protection#0d6e6263796c79624d6f67676c616860696c79686e63646e6c236e6260"><span class="__cf_email__" data-cfemail="a2c1cdccd6c3d6cde2c0c8c8c3cec7cfc6c3d6c7c1cccbc1c38cc1cdcf">[email&#160;protected]</span></a></li>
+        <li><a href="mailto:contato@bjjalemdatecnica.com">contato@bjjalemdatecnica.com</a></li>
       </ul>
     </div>
   </div>
@@ -333,7 +331,7 @@
   </div>
 </footer>
 
-<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
+<script>
   const observer = new IntersectionObserver((entries) => {
     entries.forEach(el => { if (el.isIntersecting) el.target.classList.add('visible'); });
   }, { threshold: 0.1 });
@@ -354,4 +352,14 @@
     try {
       const res = await fetch('https://formspree.io/f/xbdazdpp', {
         method: 'POST', headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
-        body: JSON.stringify(dat
+        body: JSON.stringify(data)
+      });
+      if (res.ok) { document.getElementById('successMsg').style.display = 'block'; document.getElementById('suggestionForm').reset(); }
+      else { alert('Erro ao enviar. Tente novamente ou escreva para contato@bjjalemdatecnica.com'); }
+    } catch { alert('Erro de conexão. Tente novamente.'); }
+    btn.textContent = 'Enviar Sugestão →';
+    btn.disabled = false;
+  }
+</script>
+</body>
+</html>
