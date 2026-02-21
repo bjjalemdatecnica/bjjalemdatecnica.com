@@ -1,0 +1,1007 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Jiu-jitsu Além da Técnica</title>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Crimson+Pro:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Share+Tech+Mono&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --black: #0a0a0a;
+    --deep: #111111;
+    --surface: #1a1a1a;
+    --card: #1e1e1e;
+    --red: #c0392b;
+    --red-hot: #e74c3c;
+    --red-dim: #7b1a13;
+    --gray: #888;
+    --light: #cccccc;
+    --white: #f0f0f0;
+    --mono: 'Share Tech Mono', monospace;
+    --display: 'Bebas Neue', sans-serif;
+    --body: 'Crimson Pro', serif;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    background: var(--black);
+    color: var(--light);
+    font-family: var(--body);
+    font-size: 18px;
+    line-height: 1.7;
+    overflow-x: hidden;
+  }
+
+  /* NOISE TEXTURE OVERLAY */
+  body::before {
+    content: '';
+    position: fixed;
+    inset: 0;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.04'/%3E%3C/svg%3E");
+    pointer-events: none;
+    z-index: 999;
+    opacity: 0.4;
+  }
+
+  /* NAV */
+  nav {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 100;
+    padding: 16px 48px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: linear-gradient(to bottom, rgba(10,10,10,0.98), transparent);
+    backdrop-filter: blur(4px);
+  }
+
+  .nav-logo {
+    font-family: var(--display);
+    font-size: 1.4rem;
+    letter-spacing: 0.12em;
+    color: var(--white);
+    text-decoration: none;
+  }
+
+  .nav-logo span { color: var(--red); }
+
+  .nav-links {
+    display: flex;
+    gap: 36px;
+    list-style: none;
+  }
+
+  .nav-links a {
+    font-family: var(--mono);
+    font-size: 0.75rem;
+    letter-spacing: 0.15em;
+    color: var(--gray);
+    text-decoration: none;
+    text-transform: uppercase;
+    transition: color 0.2s;
+  }
+
+  .nav-links a:hover { color: var(--red); }
+
+  /* HERO */
+  .hero {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    position: relative;
+    padding: 120px 48px 80px;
+    overflow: hidden;
+  }
+
+  .hero-bg {
+    position: absolute;
+    inset: 0;
+    background:
+      radial-gradient(ellipse 60% 80% at 70% 50%, rgba(192,57,43,0.12) 0%, transparent 70%),
+      radial-gradient(ellipse 40% 60% at 20% 80%, rgba(192,57,43,0.06) 0%, transparent 60%),
+      var(--black);
+  }
+
+  /* Tatami-inspired diagonal lines */
+  .hero-bg::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-image: repeating-linear-gradient(
+      -45deg,
+      transparent,
+      transparent 40px,
+      rgba(255,255,255,0.012) 40px,
+      rgba(255,255,255,0.012) 41px
+    );
+  }
+
+  .hero-content {
+    position: relative;
+    z-index: 2;
+    max-width: 800px;
+  }
+
+  .hero-eyebrow {
+    font-family: var(--mono);
+    font-size: 0.72rem;
+    letter-spacing: 0.3em;
+    color: var(--red);
+    text-transform: uppercase;
+    margin-bottom: 24px;
+    opacity: 0;
+    animation: fadeUp 0.8s ease 0.2s forwards;
+  }
+
+  .hero-title {
+    font-family: var(--display);
+    font-size: clamp(4rem, 10vw, 9rem);
+    line-height: 0.92;
+    color: var(--white);
+    letter-spacing: 0.02em;
+    margin-bottom: 32px;
+    opacity: 0;
+    animation: fadeUp 0.8s ease 0.4s forwards;
+  }
+
+  .hero-title span {
+    color: var(--red);
+    display: block;
+  }
+
+  .hero-subtitle {
+    font-size: 1.25rem;
+    font-style: italic;
+    color: var(--gray);
+    max-width: 520px;
+    margin-bottom: 48px;
+    opacity: 0;
+    animation: fadeUp 0.8s ease 0.6s forwards;
+  }
+
+  .hero-ctas {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    opacity: 0;
+    animation: fadeUp 0.8s ease 0.8s forwards;
+  }
+
+  .btn-primary {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    background: var(--red);
+    color: var(--white);
+    padding: 14px 32px;
+    font-family: var(--mono);
+    font-size: 0.78rem;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    text-decoration: none;
+    transition: background 0.2s, transform 0.2s;
+    clip-path: polygon(0 0, calc(100% - 12px) 0, 100% 12px, 100% 100%, 12px 100%, 0 calc(100% - 12px));
+  }
+
+  .btn-primary:hover {
+    background: var(--red-hot);
+    transform: translateY(-2px);
+  }
+
+  .btn-secondary {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    border: 1px solid rgba(255,255,255,0.15);
+    color: var(--light);
+    padding: 14px 32px;
+    font-family: var(--mono);
+    font-size: 0.78rem;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    text-decoration: none;
+    transition: border-color 0.2s, color 0.2s, transform 0.2s;
+  }
+
+  .btn-secondary:hover {
+    border-color: var(--red);
+    color: var(--red);
+    transform: translateY(-2px);
+  }
+
+  .hero-counter {
+    position: absolute;
+    right: 48px;
+    bottom: 80px;
+    text-align: right;
+    opacity: 0;
+    animation: fadeUp 0.8s ease 1s forwards;
+  }
+
+  .hero-counter .num {
+    font-family: var(--display);
+    font-size: 5rem;
+    color: rgba(192,57,43,0.15);
+    line-height: 1;
+    letter-spacing: -0.02em;
+  }
+
+  .hero-counter .label {
+    font-family: var(--mono);
+    font-size: 0.65rem;
+    color: var(--gray);
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+  }
+
+  /* SECTION BASE */
+  section {
+    padding: 100px 48px;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  .section-header {
+    display: flex;
+    align-items: baseline;
+    gap: 20px;
+    margin-bottom: 64px;
+  }
+
+  .section-number {
+    font-family: var(--mono);
+    font-size: 0.7rem;
+    color: var(--red);
+    letter-spacing: 0.2em;
+  }
+
+  .section-title {
+    font-family: var(--display);
+    font-size: clamp(2.4rem, 5vw, 4rem);
+    color: var(--white);
+    letter-spacing: 0.04em;
+    line-height: 1;
+  }
+
+  .section-line {
+    flex: 1;
+    height: 1px;
+    background: linear-gradient(to right, rgba(192,57,43,0.4), transparent);
+    margin-left: 20px;
+  }
+
+  /* YOUTUBE SECTION */
+  .youtube-section {
+    background: var(--deep);
+    max-width: 100%;
+    border-top: 1px solid rgba(192,57,43,0.2);
+    border-bottom: 1px solid rgba(192,57,43,0.2);
+  }
+
+  .youtube-section > div {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 100px 48px;
+  }
+
+  .yt-embed-wrapper {
+    position: relative;
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+  }
+
+  .yt-placeholder {
+    background: var(--surface);
+    border: 1px solid rgba(192,57,43,0.3);
+    aspect-ratio: 16/9;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+    transition: border-color 0.3s;
+  }
+
+  .yt-placeholder:hover { border-color: var(--red); }
+
+  .yt-placeholder::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(ellipse at center, rgba(192,57,43,0.08), transparent 70%);
+  }
+
+  .yt-play-icon {
+    width: 72px;
+    height: 72px;
+    background: var(--red);
+    clip-path: polygon(20% 10%, 90% 50%, 20% 90%);
+    transition: background 0.2s, transform 0.2s;
+  }
+
+  .yt-placeholder:hover .yt-play-icon {
+    background: var(--red-hot);
+    transform: scale(1.1);
+  }
+
+  .yt-label {
+    font-family: var(--mono);
+    font-size: 0.75rem;
+    letter-spacing: 0.2em;
+    color: var(--gray);
+    text-transform: uppercase;
+  }
+
+  .yt-channel-link {
+    display: block;
+    text-align: center;
+    margin-top: 32px;
+    font-family: var(--mono);
+    font-size: 0.78rem;
+    letter-spacing: 0.15em;
+    color: var(--red);
+    text-decoration: none;
+    text-transform: uppercase;
+    transition: color 0.2s;
+  }
+
+  .yt-channel-link:hover { color: var(--red-hot); }
+
+  /* BLOG */
+  .blog-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+    gap: 2px;
+  }
+
+  .blog-card {
+    background: var(--card);
+    padding: 40px;
+    position: relative;
+    overflow: hidden;
+    transition: background 0.3s;
+    cursor: pointer;
+    border-bottom: 2px solid transparent;
+  }
+
+  .blog-card:hover {
+    background: var(--surface);
+    border-bottom-color: var(--red);
+  }
+
+  .blog-card::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0;
+    height: 2px;
+    background: linear-gradient(to right, var(--red), transparent);
+    opacity: 0;
+    transition: opacity 0.3s;
+  }
+
+  .blog-card:hover::before { opacity: 1; }
+
+  .blog-tag {
+    font-family: var(--mono);
+    font-size: 0.65rem;
+    letter-spacing: 0.2em;
+    color: var(--red);
+    text-transform: uppercase;
+    margin-bottom: 16px;
+  }
+
+  .blog-card-title {
+    font-family: var(--display);
+    font-size: 1.7rem;
+    color: var(--white);
+    letter-spacing: 0.03em;
+    line-height: 1.1;
+    margin-bottom: 16px;
+  }
+
+  .blog-excerpt {
+    font-size: 0.95rem;
+    color: var(--gray);
+    line-height: 1.6;
+    margin-bottom: 24px;
+  }
+
+  .blog-meta {
+    font-family: var(--mono);
+    font-size: 0.65rem;
+    color: rgba(136,136,136,0.6);
+    letter-spacing: 0.1em;
+    display: flex;
+    gap: 20px;
+  }
+
+  .blog-card-number {
+    position: absolute;
+    bottom: 20px;
+    right: 24px;
+    font-family: var(--display);
+    font-size: 4rem;
+    color: rgba(255,255,255,0.03);
+    line-height: 1;
+    pointer-events: none;
+  }
+
+  /* SPONSORS */
+  .sponsors-section {
+    background: var(--deep);
+    max-width: 100%;
+    border-top: 1px solid rgba(255,255,255,0.05);
+  }
+
+  .sponsors-section > div {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 80px 48px;
+  }
+
+  .sponsors-intro {
+    font-style: italic;
+    color: var(--gray);
+    max-width: 560px;
+    margin-bottom: 60px;
+    font-size: 1.1rem;
+  }
+
+  .sponsors-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+    gap: 2px;
+  }
+
+  .sponsor-card {
+    background: var(--card);
+    padding: 40px 32px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    transition: background 0.3s;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .sponsor-card:hover { background: var(--surface); }
+
+  .sponsor-card::after {
+    content: '';
+    position: absolute;
+    bottom: 0; left: 0; right: 0;
+    height: 2px;
+    background: var(--red);
+    transform: scaleX(0);
+    transition: transform 0.3s;
+    transform-origin: left;
+  }
+
+  .sponsor-card:hover::after { transform: scaleX(1); }
+
+  .sponsor-logo-placeholder {
+    width: 48px;
+    height: 48px;
+    background: var(--red-dim);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: var(--mono);
+    font-size: 0.6rem;
+    color: var(--red);
+    letter-spacing: 0.1em;
+  }
+
+  .sponsor-name {
+    font-family: var(--display);
+    font-size: 1.5rem;
+    color: var(--white);
+    letter-spacing: 0.05em;
+  }
+
+  .sponsor-category {
+    font-family: var(--mono);
+    font-size: 0.65rem;
+    letter-spacing: 0.15em;
+    color: var(--red);
+    text-transform: uppercase;
+  }
+
+  .sponsor-desc {
+    font-size: 0.9rem;
+    color: var(--gray);
+    line-height: 1.5;
+  }
+
+  .sponsor-link {
+    font-family: var(--mono);
+    font-size: 0.7rem;
+    color: var(--gray);
+    text-decoration: none;
+    letter-spacing: 0.1em;
+    margin-top: auto;
+    transition: color 0.2s;
+  }
+
+  .sponsor-link:hover { color: var(--red); }
+
+  /* SUGGESTION FORM */
+  .form-wrapper {
+    max-width: 700px;
+  }
+
+  .form-intro {
+    font-style: italic;
+    color: var(--gray);
+    margin-bottom: 48px;
+    font-size: 1.1rem;
+  }
+
+  .form-group {
+    margin-bottom: 32px;
+  }
+
+  .form-label {
+    display: block;
+    font-family: var(--mono);
+    font-size: 0.7rem;
+    letter-spacing: 0.2em;
+    color: var(--red);
+    text-transform: uppercase;
+    margin-bottom: 12px;
+  }
+
+  .form-input,
+  .form-textarea,
+  .form-select {
+    width: 100%;
+    background: var(--card);
+    border: 1px solid rgba(255,255,255,0.08);
+    border-bottom: 2px solid rgba(192,57,43,0.3);
+    color: var(--white);
+    padding: 16px 20px;
+    font-family: var(--body);
+    font-size: 1rem;
+    outline: none;
+    transition: border-color 0.2s, background 0.2s;
+    -webkit-appearance: none;
+  }
+
+  .form-input:focus,
+  .form-textarea:focus,
+  .form-select:focus {
+    border-bottom-color: var(--red);
+    background: var(--surface);
+  }
+
+  .form-textarea {
+    resize: vertical;
+    min-height: 160px;
+  }
+
+  .form-select option { background: var(--card); }
+
+  .form-submit {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    background: var(--red);
+    color: var(--white);
+    border: none;
+    padding: 16px 40px;
+    font-family: var(--mono);
+    font-size: 0.78rem;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: background 0.2s, transform 0.2s;
+    clip-path: polygon(0 0, calc(100% - 12px) 0, 100% 12px, 100% 100%, 12px 100%, 0 calc(100% - 12px));
+  }
+
+  .form-submit:hover {
+    background: var(--red-hot);
+    transform: translateY(-2px);
+  }
+
+  .form-success {
+    display: none;
+    background: rgba(192,57,43,0.1);
+    border: 1px solid rgba(192,57,43,0.3);
+    padding: 24px 32px;
+    margin-top: 24px;
+    font-family: var(--mono);
+    font-size: 0.78rem;
+    letter-spacing: 0.1em;
+    color: var(--red);
+  }
+
+  /* FOOTER */
+  footer {
+    background: var(--deep);
+    border-top: 1px solid rgba(192,57,43,0.2);
+    padding: 60px 48px 40px;
+    max-width: 100%;
+  }
+
+  footer > div {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 40px;
+    flex-wrap: wrap;
+  }
+
+  .footer-brand .logo {
+    font-family: var(--display);
+    font-size: 1.8rem;
+    letter-spacing: 0.1em;
+    color: var(--white);
+    margin-bottom: 8px;
+  }
+
+  .footer-brand .logo span { color: var(--red); }
+
+  .footer-brand p {
+    font-size: 0.9rem;
+    color: var(--gray);
+    font-style: italic;
+    max-width: 280px;
+  }
+
+  .footer-links h4 {
+    font-family: var(--mono);
+    font-size: 0.65rem;
+    letter-spacing: 0.2em;
+    color: var(--red);
+    text-transform: uppercase;
+    margin-bottom: 16px;
+  }
+
+  .footer-links ul { list-style: none; }
+
+  .footer-links li { margin-bottom: 10px; }
+
+  .footer-links a {
+    font-size: 0.9rem;
+    color: var(--gray);
+    text-decoration: none;
+    transition: color 0.2s;
+  }
+
+  .footer-links a:hover { color: var(--white); }
+
+  .footer-bottom {
+    max-width: 1200px;
+    margin: 40px auto 0;
+    padding-top: 24px;
+    border-top: 1px solid rgba(255,255,255,0.05);
+    font-family: var(--mono);
+    font-size: 0.65rem;
+    color: rgba(136,136,136,0.4);
+    letter-spacing: 0.1em;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 12px;
+  }
+
+  /* DIVIDER */
+  .red-divider {
+    width: 100%;
+    height: 1px;
+    background: linear-gradient(to right, transparent, var(--red-dim), transparent);
+    margin: 0;
+  }
+
+  /* ANIMATIONS */
+  @keyframes fadeUp {
+    from { opacity: 0; transform: translateY(24px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  /* SCROLL REVEAL */
+  .reveal {
+    opacity: 0;
+    transform: translateY(32px);
+    transition: opacity 0.7s ease, transform 0.7s ease;
+  }
+
+  .reveal.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  /* RESPONSIVE */
+  @media (max-width: 768px) {
+    nav { padding: 16px 24px; }
+    .nav-links { display: none; }
+    .hero { padding: 100px 24px 60px; }
+    .hero-counter { display: none; }
+    section { padding: 70px 24px; }
+    .section-line { display: none; }
+    .blog-grid { grid-template-columns: 1fr; }
+    .sponsors-grid { grid-template-columns: 1fr; }
+    footer { padding: 50px 24px 32px; }
+  }
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <a href="#" class="nav-logo">JAT<span>.</span></a>
+  <ul class="nav-links">
+    <li><a href="#canal">Canal</a></li>
+    <li><a href="#blog">Blog</a></li>
+    <li><a href="#patrocinadores">Patrocinadores</a></li>
+    <li><a href="#sugestoes">Sugestões</a></li>
+  </ul>
+</nav>
+
+<!-- HERO -->
+<header class="hero">
+  <div class="hero-bg"></div>
+  <div class="hero-content">
+    <p class="hero-eyebrow">// Canal de Jiu-jitsu Brasileiro</p>
+    <h1 class="hero-title">
+      Jiu-jitsu
+      <span>Além da</span>
+      Técnica
+    </h1>
+    <p class="hero-subtitle">O tatame ensina o que a vida não consegue explicar. Aqui, vamos além dos movimentos.</p>
+    <div class="hero-ctas">
+      <a href="https://youtube.com/@jiujitsualemdatecnica" target="_blank" class="btn-primary">
+        ▶ Assistir no YouTube
+      </a>
+      <a href="#blog" class="btn-secondary">
+        Ler o Blog →
+      </a>
+    </div>
+  </div>
+  <div class="hero-counter">
+    <div class="num">BJJ</div>
+    <div class="label">Além da Técnica</div>
+  </div>
+</header>
+
+<div class="red-divider"></div>
+
+<!-- YOUTUBE -->
+<div class="youtube-section" id="canal">
+  <div>
+    <div class="section-header reveal">
+      <span class="section-number">01 //</span>
+      <h2 class="section-title">Último Vídeo</h2>
+      <div class="section-line"></div>
+    </div>
+    <div class="yt-embed-wrapper reveal">
+      <div class="yt-placeholder" onclick="this.innerHTML='<iframe width=\'100%\' height=\'100%\' src=\'https://www.youtube.com/embed?listType=user_uploads&list=jiujitsualemdatecnica\' frameborder=\'0\' allowfullscreen style=\'position:absolute;inset:0;\'></iframe>';this.style.aspectRatio='16/9';this.style.position='relative'">
+        <div class="yt-play-icon"></div>
+        <span class="yt-label">Clique para assistir</span>
+      </div>
+      <a href="https://youtube.com/@jiujitsualemdatecnica" target="_blank" class="yt-channel-link">
+        → Visitar o canal completo no YouTube
+      </a>
+    </div>
+  </div>
+</div>
+
+<div class="red-divider"></div>
+
+<!-- BLOG -->
+<section id="blog">
+  <div class="section-header reveal">
+    <span class="section-number">02 //</span>
+    <h2 class="section-title">Blog</h2>
+    <div class="section-line"></div>
+  </div>
+  <div class="blog-grid">
+
+    <article class="blog-card reveal">
+      <div class="blog-tag">Filosofia • Mentalidade</div>
+      <h3 class="blog-card-title">O Ego é Seu Maior Adversário no Tatame</h3>
+      <p class="blog-excerpt">Antes de aprender qualquer finalização, o praticante precisa vencer a batalha interna. O ego que resiste ao tap é o mesmo que impede a evolução.</p>
+      <div class="blog-meta">
+        <span>Jan 2025</span>
+        <span>5 min de leitura</span>
+      </div>
+      <span class="blog-card-number">01</span>
+    </article>
+
+    <article class="blog-card reveal">
+      <div class="blog-tag">Técnica • Guarda</div>
+      <h3 class="blog-card-title">Por Que Você Não Consegue Manter a Guarda Fechada</h3>
+      <p class="blog-excerpt">Um erro de posicionamento de quadril que 90% dos iniciantes cometem — e como corrigi-lo sem precisar de força bruta.</p>
+      <div class="blog-meta">
+        <span>Dez 2024</span>
+        <span>7 min de leitura</span>
+      </div>
+      <span class="blog-card-number">02</span>
+    </article>
+
+    <article class="blog-card reveal">
+      <div class="blog-tag">Estilo de Vida • Recuperação</div>
+      <h3 class="blog-card-title">Treinar Todo Dia Não é Dedicação. É Vaidade.</h3>
+      <p class="blog-excerpt">A cultura do overtraining no jiu-jitsu amador e como o descanso estratégico pode dobrar seu progresso técnico em 90 dias.</p>
+      <div class="blog-meta">
+        <span>Nov 2024</span>
+        <span>6 min de leitura</span>
+      </div>
+      <span class="blog-card-number">03</span>
+    </article>
+
+  </div>
+</section>
+
+<div class="red-divider"></div>
+
+<!-- SPONSORS -->
+<div class="sponsors-section" id="patrocinadores">
+  <div>
+    <div class="section-header reveal">
+      <span class="section-number">03 //</span>
+      <h2 class="section-title">Patrocinadores</h2>
+      <div class="section-line"></div>
+    </div>
+    <p class="sponsors-intro reveal">Marcas que acreditam no projeto e apoiam o crescimento do jiu-jitsu brasileiro no mundo.</p>
+    <div class="sponsors-grid">
+
+      <div class="sponsor-card reveal">
+        <div class="sponsor-logo-placeholder">BJJ</div>
+        <div class="sponsor-name">BJJ Protech</div>
+        <div class="sponsor-category">Equipamentos & Proteção</div>
+        <p class="sponsor-desc">Equipamentos de proteção de alto desempenho, desenvolvidos para atletas sérios de grappling e jiu-jitsu.</p>
+        <a href="#" class="sponsor-link">bjjprotech.com →</a>
+      </div>
+
+      <div class="sponsor-card reveal">
+        <div class="sponsor-logo-placeholder">GD</div>
+        <div class="sponsor-name">Grappling Dummy 2.0</div>
+        <div class="sponsor-category">Treino Solo</div>
+        <p class="sponsor-desc">O boneco de treino mais completo do mercado nacional para solodrill e aprimoramento técnico sem parceiro.</p>
+        <a href="#" class="sponsor-link">grapplingdummy.com.br →</a>
+      </div>
+
+      <div class="sponsor-card reveal">
+        <div class="sponsor-logo-placeholder">MT</div>
+        <div class="sponsor-name">Max Titanium</div>
+        <div class="sponsor-category">Suplementação</div>
+        <p class="sponsor-desc">Suplementação de alta performance para atletas de arte marcial. Recuperação, força e foco no tatame.</p>
+        <a href="#" class="sponsor-link">maxtitanium.com.br →</a>
+      </div>
+
+      <div class="sponsor-card reveal" style="border: 1px dashed rgba(192,57,43,0.25); background: transparent;">
+        <div class="sponsor-logo-placeholder" style="background: transparent; border: 1px dashed rgba(192,57,43,0.3);">?</div>
+        <div class="sponsor-name" style="color: var(--gray);">Sua Marca Aqui</div>
+        <div class="sponsor-category">Em Aberto</div>
+        <p class="sponsor-desc">Quer patrocinar o canal? Entre em contato e vamos conversar sobre como podemos crescer juntos.</p>
+        <a href="mailto:contato@bjjalemdatecnica.com" class="sponsor-link">Fale conosco →</a>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<div class="red-divider"></div>
+
+<!-- FORM -->
+<section id="sugestoes">
+  <div class="section-header reveal">
+    <span class="section-number">04 //</span>
+    <h2 class="section-title">Sugestões</h2>
+    <div class="section-line"></div>
+  </div>
+  <div class="form-wrapper">
+    <p class="form-intro reveal">Qual técnica você quer ver? Que pergunta sobre o jiu-jitsu ainda não foi respondida? Me conta — o próximo vídeo pode ser o seu.</p>
+    <form id="suggestionForm" class="reveal" onsubmit="handleSubmit(event)">
+
+      <div class="form-group">
+        <label class="form-label" for="name">Seu nome</label>
+        <input class="form-input" type="text" id="name" placeholder="Ex: João Silva" required>
+      </div>
+
+      <div class="form-group">
+        <label class="form-label" for="email">E-mail (opcional)</label>
+        <input class="form-input" type="email" id="email" placeholder="para eu te avisar quando postar">
+      </div>
+
+      <div class="form-group">
+        <label class="form-label" for="category">Categoria</label>
+        <select class="form-select" id="category">
+          <option value="">Selecione...</option>
+          <option value="tecnica">Técnica específica</option>
+          <option value="posicao">Posição ou situação de rolamento</option>
+          <option value="filosofia">Filosofia e mentalidade</option>
+          <option value="treino">Planejamento de treino</option>
+          <option value="outro">Outro assunto</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label class="form-label" for="message">Sua sugestão</label>
+        <textarea class="form-textarea" id="message" placeholder="Descreva o tema ou pergunta que você quer que eu aborde..." required></textarea>
+      </div>
+
+      <button type="submit" class="form-submit">
+        Enviar Sugestão →
+      </button>
+
+      <div class="form-success" id="successMsg">
+        ✓ &nbsp; Sugestão recebida. Obrigado — vou ler com atenção.
+      </div>
+
+    </form>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div>
+    <div class="footer-brand">
+      <div class="logo">Jiu-jitsu <span>Além da Técnica</span></div>
+      <p>O tatame como escola de vida. Técnica, filosofia e tudo que está além do movimento.</p>
+    </div>
+    <div class="footer-links">
+      <h4>Navegação</h4>
+      <ul>
+        <li><a href="#canal">Último Vídeo</a></li>
+        <li><a href="#blog">Blog</a></li>
+        <li><a href="#patrocinadores">Patrocinadores</a></li>
+        <li><a href="#sugestoes">Sugestões</a></li>
+      </ul>
+    </div>
+    <div class="footer-links">
+      <h4>Externo</h4>
+      <ul>
+        <li><a href="https://youtube.com/@jiujitsualemdatecnica" target="_blank">YouTube</a></li>
+        <li><a href="https://instagram.com" target="_blank">Instagram</a></li>
+        <li><a href="mailto:contato@bjjalemdatecnica.com">contato@bjjalemdatecnica.com</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span>© 2025 Jiu-jitsu Além da Técnica — bjjalemdatecnica.com</span>
+    <span>OSS</span>
+  </div>
+</footer>
+
+<script>
+  // Scroll reveal
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(el => {
+      if (el.isIntersecting) {
+        el.target.classList.add('visible');
+      }
+    });
+  }, { threshold: 0.1 });
+
+  document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+
+  // Form submission
+  function handleSubmit(e) {
+    e.preventDefault();
+    const btn = document.querySelector('.form-submit');
+    btn.textContent = 'Enviando...';
+    btn.disabled = true;
+    setTimeout(() => {
+      document.getElementById('successMsg').style.display = 'block';
+      document.getElementById('suggestionForm').reset();
+      btn.textContent = 'Enviar Sugestão →';
+      btn.disabled = false;
+    }, 1000);
+  }
+</script>
+
+</body>
+</html>
