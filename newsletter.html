@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Newsletter Jiu-Jitsu Além da Técnica: o Resumo da Semana e Artigos no Seu E-mail</title>
+<meta name="description" content="Newsletter gratuita de jiu-jitsu pra quem treina por hobby: todo domingo o Resumo da Semana com as notícias comentadas, mais os artigos novos sobre treinar depois dos 35, faixa azul, game plan e volta aos treinos.">
+<link rel="canonical" href="https://bjjalemdatecnica.com/newsletter">
+<meta property="og:title" content="Newsletter Jiu-Jitsu Além da Técnica">
+<meta property="og:description" content="Todo domingo, o que importou na semana do jiu-jitsu, comentado por quem treina por hobby. Mais os artigos novos. De graça, sem enrolação.">
+<meta property="og:url" content="https://bjjalemdatecnica.com/newsletter">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="pt_BR">
+<meta property="og:site_name" content="BJJ Além da Técnica">
+<meta property="og:image" content="https://bjjalemdatecnica.com/images/resumos/2026-10-18/hero-campeonato-interclubes.jpg">
+<meta property="og:image:alt" content="Vista do alto de um ginásio com tatames e várias lutas de jiu-jitsu acontecendo ao mesmo tempo">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Newsletter Jiu-Jitsu Além da Técnica">
+<meta name="twitter:description" content="Todo domingo, o que importou na semana do jiu-jitsu, comentado por quem treina por hobby. De graça.">
+<meta name="twitter:image" content="https://bjjalemdatecnica.com/images/resumos/2026-10-18/hero-campeonato-interclubes.jpg">
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Crimson+Pro:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Share+Tech+Mono&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --black: #0a0a0a; --deep: #111111; --surface: #1a1a1a; --card: #1e1e1e;
+    --red: #c0392b; --red-hot: #e74c3c; --red-dim: #7b1a13;
+    --gray: #888; --light: #cccccc; --white: #f0f0f0;
+    --mono: 'Share Tech Mono', monospace;
+    --display: 'Bebas Neue', sans-serif;
+    --body: 'Crimson Pro', serif;
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body { background: var(--black); color: var(--light); font-family: var(--body); font-size: 18px; line-height: 1.7; overflow-x: hidden; }
+  body::before { content: ''; position: fixed; inset: 0; background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.04'/%3E%3C/svg%3E"); pointer-events: none; z-index: 999; opacity: 0.4; }
+  nav { position: fixed; top: 0; width: 100%; z-index: 100; padding: 12px 48px; display: flex; justify-content: space-between; align-items: center; background: linear-gradient(to bottom, rgba(10,10,10,0.98), transparent); backdrop-filter: blur(4px); }
+  .nav-logo { display: flex; align-items: center; gap: 12px; text-decoration: none; }
+  .nav-logo img { height: 52px; width: auto; }
+  .nav-logo-text { font-family: var(--display); font-size: 1.1rem; letter-spacing: 0.1em; color: var(--white); line-height: 1.1; }
+  .nav-logo-text span { color: var(--red); display: block; }
+  .nav-links { display: flex; gap: 36px; list-style: none; }
+  .nav-links a { font-family: var(--mono); font-size: 0.75rem; letter-spacing: 0.15em; color: var(--gray); text-decoration: none; text-transform: uppercase; transition: color 0.2s; }
+  .nav-links a:hover { color: var(--red); }
+  .red-divider { width: 100%; height: 1px; background: linear-gradient(to right, transparent, var(--red-dim), transparent); }
+  footer { background: var(--deep); border-top: 1px solid rgba(192,57,43,0.2); padding: 60px 48px 40px; }
+  footer > div { max-width: 1200px; margin: 0 auto; display: flex; justify-content: space-between; align-items: flex-start; gap: 40px; flex-wrap: wrap; }
+  .footer-logo img { height: 64px; width: auto; margin-bottom: 12px; display: block; }
+  .footer-logo p { font-size: 0.9rem; color: var(--gray); font-style: italic; max-width: 280px; }
+  .footer-links h4 { font-family: var(--mono); font-size: 0.65rem; letter-spacing: 0.2em; color: var(--red); text-transform: uppercase; margin-bottom: 16px; }
+  .footer-links ul { list-style: none; }
+  .footer-links li { margin-bottom: 10px; }
+  .footer-links a { font-size: 0.9rem; color: var(--gray); text-decoration: none; transition: color 0.2s; }
+  .footer-links a:hover { color: var(--white); }
+  .footer-bottom { max-width: 1200px; margin: 40px auto 0; padding-top: 24px; border-top: 1px solid rgba(255,255,255,0.05); font-family: var(--mono); font-size: 0.65rem; color: rgba(136,136,136,0.4); letter-spacing: 0.1em; display: flex; justify-content: space-between; flex-wrap: wrap; gap: 12px; }
+  @keyframes fadeUp { from { opacity: 0; transform: translateY(24px); } to { opacity: 1; transform: translateY(0); } }
+  .reveal { opacity: 0; transform: translateY(32px); transition: opacity 0.7s ease, transform 0.7s ease; }
+  .reveal.visible { opacity: 1; transform: translateY(0); }
+  @media (max-width: 768px) { nav { padding: 12px 24px; } .nav-links { display: none; } footer { padding: 40px 24px 24px; } }
+
+
+
+  .nav-links a.active { color: var(--red); }
+  .wrap { max-width: 1100px; margin: 0 auto; padding: 0 48px; }
+  .tag { font-family: var(--mono); font-size: 0.7rem; letter-spacing: 0.2em; color: var(--red); text-transform: uppercase; display: block; margin-bottom: 18px; }
+  h2.sec { font-family: var(--display); font-size: clamp(2rem, 4vw, 3rem); color: var(--white); letter-spacing: 0.03em; line-height: 1; margin-bottom: 28px; }
+  section { padding: 80px 0; }
+  section + section { border-top: 1px solid rgba(255,255,255,0.05); }
+  p strong { color: var(--white); font-weight: 600; }
+  a.inline { color: var(--red); }
+
+  /* HERO */
+  .hero { padding: 150px 0 80px; background: radial-gradient(ellipse at 80% 20%, rgba(192,57,43,0.18), transparent 60%); }
+  .hero-grid { display: grid; grid-template-columns: 1.15fr 0.85fr; gap: 64px; align-items: center; }
+  .hero h1 { font-family: var(--display); font-size: clamp(2.8rem, 6.5vw, 5.4rem); color: var(--white); line-height: 0.92; letter-spacing: 0.01em; margin-bottom: 26px; animation: fadeUp 0.8s ease both; }
+  .hero h1 em { font-style: normal; color: var(--red); }
+  .hero .sub { font-size: 1.25rem; color: var(--light); max-width: 560px; margin-bottom: 26px; animation: fadeUp 0.8s 0.1s ease both; }
+  .proof { display: flex; gap: 28px; flex-wrap: wrap; font-family: var(--mono); font-size: 0.72rem; letter-spacing: 0.1em; color: var(--gray); text-transform: uppercase; }
+  .proof b { display: block; font-family: var(--display); font-size: 1.9rem; color: var(--white); letter-spacing: 0.03em; font-weight: 400; line-height: 1; margin-bottom: 4px; }
+
+  /* FORM */
+  .form-card { background: var(--card); border: 1px solid rgba(192,57,43,0.35); padding: 34px 30px; position: relative; animation: fadeUp 0.8s 0.2s ease both; }
+  .form-card h3 { font-family: var(--display); font-size: 1.9rem; color: var(--white); letter-spacing: 0.03em; line-height: 1; margin-bottom: 8px; }
+  .form-card .hint { font-size: 1rem; color: var(--gray); margin-bottom: 22px; line-height: 1.5; }
+  .form-card label { display: block; font-family: var(--mono); font-size: 0.65rem; letter-spacing: 0.15em; text-transform: uppercase; color: var(--gray); margin-bottom: 6px; }
+  .form-card input { width: 100%; background: var(--black); border: 1px solid rgba(255,255,255,0.14); color: var(--white); font-family: var(--body); font-size: 1.05rem; padding: 12px 14px; margin-bottom: 16px; outline: none; transition: border-color 0.2s; }
+  .form-card input:focus { border-color: var(--red); }
+  .btn { display: block; width: 100%; background: var(--red); color: var(--white); border: none; font-family: var(--display); font-size: 1.35rem; letter-spacing: 0.08em; padding: 14px 18px; cursor: pointer; transition: background 0.2s; text-align: center; text-decoration: none; }
+  .btn:hover { background: var(--red-hot); }
+  .form-card .fine { font-family: var(--mono); font-size: 0.62rem; letter-spacing: 0.06em; color: rgba(136,136,136,0.75); margin-top: 14px; line-height: 1.6; }
+  .placeholder-flag { position: absolute; top: -11px; right: 14px; background: #f1c40f; color: #111; font-family: var(--mono); font-size: 0.58rem; letter-spacing: 0.08em; padding: 3px 8px; text-transform: uppercase; }
+
+  /* RECEIVE */
+  .cards { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
+  .card { background: var(--surface); border-top: 2px solid var(--red); padding: 28px 24px; }
+  .card .when { font-family: var(--mono); font-size: 0.62rem; letter-spacing: 0.18em; color: var(--red); text-transform: uppercase; margin-bottom: 10px; }
+  .card h3 { font-family: var(--display); font-size: 1.6rem; color: var(--white); letter-spacing: 0.03em; line-height: 1.05; margin-bottom: 12px; }
+  .card p { font-size: 1.02rem; line-height: 1.6; }
+
+  /* FOR WHO */
+  .two { display: grid; grid-template-columns: 1fr 1fr; gap: 56px; }
+  .checks { list-style: none; }
+  .checks li { padding: 12px 0 12px 34px; position: relative; border-bottom: 1px solid rgba(255,255,255,0.05); }
+  .checks li::before { content: '✓'; position: absolute; left: 0; top: 12px; color: var(--red); font-family: var(--mono); }
+  .checks.no li::before { content: '✕'; color: var(--gray); }
+  .checks.no li { color: var(--gray); }
+  .col-title { font-family: var(--mono); font-size: 0.7rem; letter-spacing: 0.2em; color: var(--white); text-transform: uppercase; margin-bottom: 8px; }
+
+  /* ABOUT */
+  .about { display: grid; grid-template-columns: 160px 1fr; gap: 40px; align-items: start; }
+  .about img { width: 160px; height: auto; }
+  .about p { margin-bottom: 1.1em; max-width: 720px; }
+
+  /* SAMPLES */
+  .samples { display: grid; grid-template-columns: repeat(2, 1fr); gap: 18px; }
+  .sample { display: block; background: var(--card); padding: 24px; text-decoration: none; border: 1px solid rgba(255,255,255,0.06); transition: border-color 0.2s, transform 0.2s; }
+  .sample:hover { border-color: var(--red); transform: translateY(-2px); }
+  .sample .t { font-family: var(--mono); font-size: 0.6rem; letter-spacing: 0.15em; color: var(--red); text-transform: uppercase; margin-bottom: 8px; }
+  .sample .h { font-family: var(--display); font-size: 1.45rem; color: var(--white); letter-spacing: 0.02em; line-height: 1.1; margin-bottom: 8px; }
+  .sample .d { font-size: 0.98rem; color: var(--gray); line-height: 1.5; }
+  .soon { margin-top: 26px; font-size: 1.02rem; color: var(--gray); }
+
+  /* FAQ */
+  .faq details { border-bottom: 1px solid rgba(255,255,255,0.08); padding: 18px 0; }
+  .faq summary { cursor: pointer; font-family: var(--display); font-size: 1.4rem; color: var(--white); letter-spacing: 0.03em; list-style: none; display: flex; justify-content: space-between; gap: 16px; }
+  .faq summary::-webkit-details-marker { display: none; }
+  .faq summary::after { content: '+'; color: var(--red); font-family: var(--mono); }
+  .faq details[open] summary::after { content: '–'; }
+  .faq details p { margin-top: 10px; max-width: 760px; }
+
+  /* FINAL CTA */
+  .final { text-align: center; background: radial-gradient(ellipse at 50% 0%, rgba(192,57,43,0.2), transparent 65%); }
+  .final p { max-width: 640px; margin: 0 auto 28px; }
+  .final .btn { display: inline-block; width: auto; padding: 14px 40px; }
+
+  @media (max-width: 900px) {
+    .wrap { padding: 0 22px; }
+    .hero { padding: 110px 0 56px; }
+    .hero-grid, .two, .samples { grid-template-columns: 1fr; gap: 36px; }
+    .cards { grid-template-columns: 1fr; }
+    .about { grid-template-columns: 1fr; gap: 20px; }
+    .about img { width: 110px; }
+    section { padding: 56px 0; }
+  }
+</style>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-D540WZZMDB"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-D540WZZMDB');
+</script>
+<script>(function(w,d,e,u,f,l,n){w[f]=w[f]||function(){(w[f].q=w[f].q||[]).push(arguments);},l=d.createElement(e),l.async=1,l.src=u,n=d.getElementsByTagName(e)[0],n.parentNode.insertBefore(l,n);})(window,document,'script','https://assets.mailerlite.com/js/universal.js','ml');ml('account', '2003266');</script>
+</head>
+<body>
+
+<nav>
+  <a href="index.html" class="nav-logo">
+    <img src="LOGO.png" alt="BJJ Além da Técnica">
+    <div class="nav-logo-text">BJJ <span>Além da Técnica</span></div>
+  </a>
+  <ul class="nav-links">
+    <li><a href="index.html#canal">Canal</a></li>
+    <li><a href="index.html#blog">Blog</a></li>
+    <li><a href="index.html#patrocinadores">Patrocinadores</a></li>
+    <li><a href="index.html#sugestoes">Sugestões</a></li>
+    <li><a href="/newsletter" class="active">Newsletter</a></li>
+  </ul>
+</nav>
+
+<header class="hero">
+  <div class="wrap hero-grid">
+    <div>
+      <span class="tag">Newsletter gratuita • Todo domingo</span>
+      <h1>O jiu-jitsu da semana, <em>sem enrolação</em>, no seu e-mail</h1>
+      <p class="sub">Você já parou pra pensar que acompanhar jiu-jitsu hoje é como tentar beber água direto da mangueira do bombeiro? É campeonato, polêmica e vídeo de 30 segundos o tempo todo. Todo domingo eu filtro o que realmente importou, comento do jeito que a gente conversa na beira do tatame e te mando junto os artigos novos da semana. Pra você treinar com direção, não no piloto automático.</p>
+    </div>
+
+    <div id="mailerlite-form" class="form-card">
+      <div class="ml-embedded" data-form="NzLFN1"></div>
+    </div>
+  </div>
+</header>
+
+<section>
+  <div class="wrap">
+    <span class="tag">O que você recebe</span>
+    <h2 class="sec">Um e-mail. O que importa. Pra aplicar já no próximo treino.</h2>
+    <div class="cards">
+      <div class="card">
+        <div class="when">Todo domingo</div>
+        <h3>Resumo da Semana no Jiu-Jitsu</h3>
+        <p>As notícias que realmente importaram na semana, cada uma com a fonte e o meu comentário: o que aquilo muda pra quem treina por hobby, entre trabalho e família. Fecha com a agenda dos próximos eventos.</p>
+      </div>
+      <div class="card">
+        <div class="when">Durante a semana</div>
+        <h3>Os artigos novos do blog</h3>
+        <p>Treinar depois dos 35 e dos 40, o caminho da faixa branca pra azul, game plan, voltar depois de lesão ou de uma sumida, colegas de treino, filho no tatame. Tudo com um "na prática" no final.</p>
+      </div>
+      <div class="card">
+        <div class="when">Sempre</div>
+        <h3>Dicas práticas de treino</h3>
+        <p>Um "na prática" pra levar pro próximo treino: como montar objetivo, revisar o rola, treinar sem se quebrar. Nada de guru: é um colega de treino um pouco mais velho dividindo o que aprendeu, o que leu e o que deu errado. E você pode responder qualquer e-mail: eu leio.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap two">
+    <div>
+      <span class="tag">Pra quem é</span>
+      <h2 class="sec">Se você se reconheceu aqui, é pra você</h2>
+      <p class="col-title">É pra você que:</p>
+      <ul class="checks">
+        <li>treina por hobby e tem trabalho, família e boleto pra pagar</li>
+        <li>treina quando dá, entre um compromisso e outro</li>
+        <li>é faixa branca ou azul e às vezes se sente perdido na jornada</li>
+        <li>tem 35, 40, 50 anos e quer continuar treinando sem se quebrar</li>
+        <li>parou um tempo e tá tentando voltar</li>
+        <li>quer saber o que rolou no mundo do jiu-jitsu sem passar o domingo rolando o feed</li>
+      </ul>
+    </div>
+    <div>
+      <span class="tag">&nbsp;</span>
+      <h2 class="sec">E não é pra você que…</h2>
+      <p class="col-title">Provavelmente não é pra você se:</p>
+      <ul class="checks no">
+        <li>procura instrucional técnico passo a passo</li>
+        <li>quer resultado de todas as lutas de todos os campeonatos</li>
+        <li>acha que rola é pra ganhar de todo mundo, todo dia</li>
+      </ul>
+      <p style="margin-top:22px">Aqui a conversa é outra: rola não é competição, rola é laboratório. E consistência bate talento quando o talento não é consistente.</p>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <span class="tag">Quem escreve</span>
+    <h2 class="sec">Prazer, Rafael. Um colega de treino, não um guru.</h2>
+    <div class="about">
+      <img src="LOGO.png" alt="Logo BJJ Além da Técnica">
+      <div>
+        <p>Comecei no jiu-jitsu em 2015, no Brasil, numa época de treino duro e rola pesado desde o primeiro dia. Em 2019 me mudei pro Canadá e aí veio a vida de imigrante: 3 anos sem treinar, sem tempo e sem dinheiro. Quando voltei, parecia que eu tava aprendendo do zero. Foi foda.</p>
+        <p>Mas foi ali que eu entendi uma coisa: pra quem tem trabalho e família, o que faz diferença não é treinar mais, é treinar com intenção. Sair de casa com um objetivo claro pra cada treino.</p>
+        <p>Não sou guru e não vou fingir que sou. Sou pai, tenho um calcanhar que nunca mais foi o mesmo e o que eu faço é ler, assistir e testar no tatame o que os grandes ensinam (Rickson, Danaher, Cobrinha, Rener, Matakas) e traduzir isso pra quem treina como a gente. É isso que vai pro canal <a class="inline" href="https://www.youtube.com/@BJJAlemDaTecnica" target="_blank" rel="noopener">Jiu-Jitsu Além da Técnica</a>, e agora pro seu e-mail.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <span class="tag">Prova antes de entrar</span>
+    <h2 class="sec">Dá uma olhada no que você vai receber</h2>
+    <div class="samples">
+      <a class="sample" href="resumo-da-semana-jiu-jitsu-2026-10-18.html">
+        <div class="t">Resumo da Semana • 18/10/2026</div>
+        <div class="h">O Bronze Que Virou Ouro, Treinar Depois dos 50 e o Caso Kabuto</div>
+        <div class="d">A primeira edição: Pan Pacific, Brian Glick e a lógica do Danaher, a defesa do drill e garotos de projeto social no pódio em Lisboa.</div>
+      </a>
+      <a class="sample" href="post-masters-35.html">
+        <div class="t">Mentalidade • Masters</div>
+        <div class="h">Como Treinar 4x Por Semana Depois dos 35 Sem Se Quebrar</div>
+        <div class="d">Regras práticas pra quem é master e quer treinar com frequência sem se lesionar.</div>
+      </a>
+      <a class="sample" href="post-roger-gracie.html">
+        <div class="t">História • Inspiração</div>
+        <div class="h">O GOAT Que Ninguém Apostava: A História Real de Roger Gracie</div>
+        <div class="d">Como o garoto em quem ninguém apostava virou o GOAT.</div>
+      </a>
+      <a class="sample" href="post-abu-dhabi.html">
+        <div class="t">Filosofia • Política Esportiva</div>
+        <div class="h">E Se Jiu-jitsu Fosse Obrigatório no Brasil? A Lição de Abu Dhabi</div>
+        <div class="d">Jiu-jitsu obrigatório na escola: a lição sobre paixão e obrigação.</div>
+      </a>
+    </div>
+    <p class="soon"><strong>Vem aí nas próximas semanas:</strong> as verdades brutais que ninguém te conta, o caminho da faixa branca pra azul, Danaher e os leg locks, e como voltar depois de parar.</p>
+  </div>
+</section>
+
+<section class="faq">
+  <div class="wrap">
+    <span class="tag">Perguntas frequentes</span>
+    <h2 class="sec">Antes que você pergunte</h2>
+    <details open>
+      <summary>Com que frequência chega e-mail?</summary>
+      <p>O principal é o Resumo da Semana, todo domingo. Quando sai artigo novo no blog durante a semana, ele entra junto. Ou seja: na maioria das semanas, é um e-mail só. Nada de te encher a caixa.</p>
+    </details>
+    <details>
+      <summary>É de graça mesmo?</summary>
+      <p>É. Não tem pegadinha, não tem cartão de crédito. Vai por mim: a única coisa que eu te peço é ler e, se curtir, mandar pro seu colega de treino.</p>
+    </details>
+    <details>
+      <summary>Posso sair quando quiser?</summary>
+      <p>Pode. Todo e-mail tem um link pra cancelar no final. Um clique e pronto, sem ressentimento. Oss.</p>
+    </details>
+    <details>
+      <summary>Preciso ser faixa branca ou azul?</summary>
+      <p>Não. O conteúdo é pensado pra quem tá começando ou no meio da jornada, mas quem treina por hobby, de qualquer faixa e idade, vai se identificar com muita coisa.</p>
+    </details>
+    <details>
+      <summary>Isso é a mesma coisa que o guia da faixa azul?</summary>
+      <p>Não. O guia é um material separado, do vídeo do roadmap da faixa azul. A newsletter é o conteúdo da semana: o resumo de domingo e os artigos novos.</p>
+    </details>
+    <details>
+      <summary>Posso responder os e-mails?</summary>
+      <p>Pode e deve. Me conta o que você treina, onde tá travado, o que gostaria de ler. Muito do que vira artigo e vídeo nasce dessas conversas.</p>
+    </details>
+  </div>
+</section>
+
+<section class="final">
+  <div class="wrap">
+    <span class="tag">Beleza, agora a bola tá com você</span>
+    <h2 class="sec">Domingo que vem, o resumo chega no seu e-mail</h2>
+    <p>Entrar é rapidinho. O resto é contigo e o tatame.</p>
+    <a class="btn" href="#mailerlite-form">Quero receber a newsletter →</a>
+  </div>
+</section>
+
+<div class="red-divider"></div>
+
+<footer>
+  <div>
+    <div class="footer-logo">
+      <img src="LOGO.png" alt="BJJ Além da Técnica">
+      <p>O tatame como escola de vida. Técnica, filosofia e tudo que está além do movimento.</p>
+    </div>
+    <div class="footer-links">
+      <h4>Navegação</h4>
+      <ul>
+        <li><a href="index.html#canal">Último Vídeo</a></li>
+        <li><a href="index.html#blog">Blog</a></li>
+        <li><a href="index.html#patrocinadores">Patrocinadores</a></li>
+        <li><a href="index.html#sugestoes">Sugestões</a></li>
+        <li><a href="/newsletter">Newsletter</a></li>
+      </ul>
+    </div>
+    <div class="footer-links">
+      <h4>Contato</h4>
+      <ul>
+        <li><a href="https://www.youtube.com/@BJJAlemDaTecnica" target="_blank">YouTube</a></li>
+        <li><a href="mailto:contato@bjjalemdatecnica.com">contato@bjjalemdatecnica.com</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span>© 2026 BJJ Além da Técnica — bjjalemdatecnica.com</span>
+    <span>OSS</span>
+  </div>
+</footer>
+<script>
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(el => { if (el.isIntersecting) el.target.classList.add('visible'); });
+  }, { threshold: 0.1 });
+  document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+</script>
+
+</body>
+</html>
