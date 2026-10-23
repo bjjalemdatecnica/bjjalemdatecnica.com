@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>O Que Se Espera de Um Faixa Branca: o Mapa Completo Até a Faixa Azul — BJJ Além da Técnica</title>
+<meta name="description" content="O que um faixa branca precisa saber pra chegar na azul: escapes, conceitos de sobrevivência, posições, 6 raspagens, 6 finalizações, 4 passagens, drills, tempo médio e a mentalidade certa.">
+<meta property="og:title" content="O Que Se Espera de Um Faixa Branca: o Mapa Completo Até a Faixa Azul">
+<meta property="og:description" content="O que um faixa branca precisa saber pra chegar na azul: escapes, conceitos de sobrevivência, posições, 6 raspagens, 6 finalizações, 4 passagens, drills, tempo médio e a mentalidade certa.">
+<meta property="og:url" content="https://bjjalemdatecnica.com/faixa-branca-para-faixa-azul.html">
+<meta property="og:type" content="article">
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Crimson+Pro:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Share+Tech+Mono&display=swap" rel="stylesheet">
+<style>
+
+  :root {
+    --black: #0a0a0a; --deep: #111111; --surface: #1a1a1a; --card: #1e1e1e;
+    --red: #c0392b; --red-hot: #e74c3c; --red-dim: #7b1a13;
+    --gray: #888; --light: #cccccc; --white: #f0f0f0;
+    --mono: 'Share Tech Mono', monospace;
+    --display: 'Bebas Neue', sans-serif;
+    --body: 'Crimson Pro', serif;
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body { background: var(--black); color: var(--light); font-family: var(--body); font-size: 18px; line-height: 1.7; overflow-x: hidden; }
+  body::before { content: ''; position: fixed; inset: 0; background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.04'/%3E%3C/svg%3E"); pointer-events: none; z-index: 999; opacity: 0.4; }
+  nav { position: fixed; top: 0; width: 100%; z-index: 100; padding: 12px 48px; display: flex; justify-content: space-between; align-items: center; background: linear-gradient(to bottom, rgba(10,10,10,0.98), transparent); backdrop-filter: blur(4px); }
+  .nav-logo { display: flex; align-items: center; gap: 12px; text-decoration: none; }
+  .nav-logo img { height: 52px; width: auto; }
+  .nav-logo-text { font-family: var(--display); font-size: 1.1rem; letter-spacing: 0.1em; color: var(--white); line-height: 1.1; }
+  .nav-logo-text span { color: var(--red); display: block; }
+  .nav-links { display: flex; gap: 36px; list-style: none; }
+  .nav-links a { font-family: var(--mono); font-size: 0.75rem; letter-spacing: 0.15em; color: var(--gray); text-decoration: none; text-transform: uppercase; transition: color 0.2s; }
+  .nav-links a:hover { color: var(--red); }
+  .red-divider { width: 100%; height: 1px; background: linear-gradient(to right, transparent, var(--red-dim), transparent); }
+  footer { background: var(--deep); border-top: 1px solid rgba(192,57,43,0.2); padding: 60px 48px 40px; }
+  footer > div { max-width: 1200px; margin: 0 auto; display: flex; justify-content: space-between; align-items: flex-start; gap: 40px; flex-wrap: wrap; }
+  .footer-logo img { height: 64px; width: auto; margin-bottom: 12px; display: block; }
+  .footer-logo p { font-size: 0.9rem; color: var(--gray); font-style: italic; max-width: 280px; }
+  .footer-links h4 { font-family: var(--mono); font-size: 0.65rem; letter-spacing: 0.2em; color: var(--red); text-transform: uppercase; margin-bottom: 16px; }
+  .footer-links ul { list-style: none; }
+  .footer-links li { margin-bottom: 10px; }
+  .footer-links a { font-size: 0.9rem; color: var(--gray); text-decoration: none; transition: color 0.2s; }
+  .footer-links a:hover { color: var(--white); }
+  .footer-bottom { max-width: 1200px; margin: 40px auto 0; padding-top: 24px; border-top: 1px solid rgba(255,255,255,0.05); font-family: var(--mono); font-size: 0.65rem; color: rgba(136,136,136,0.4); letter-spacing: 0.1em; display: flex; justify-content: space-between; flex-wrap: wrap; gap: 12px; }
+  @keyframes fadeUp { from { opacity: 0; transform: translateY(24px); } to { opacity: 1; transform: translateY(0); } }
+  .reveal { opacity: 0; transform: translateY(32px); transition: opacity 0.7s ease, transform 0.7s ease; }
+  .reveal.visible { opacity: 1; transform: translateY(0); }
+  @media (max-width: 768px) { nav { padding: 12px 24px; } .nav-links { display: none; } footer { padding: 40px 24px 24px; } }
+
+
+  .post-layout { display: grid; grid-template-columns: 1fr 320px; gap: 60px; max-width: 1200px; margin: 0 auto; padding: 120px 48px 80px; align-items: start; }
+  .post-main {}
+  .post-header { margin-bottom: 48px; }
+  .post-tag { font-family: var(--mono); font-size: 0.65rem; letter-spacing: 0.2em; color: var(--red); text-transform: uppercase; margin-bottom: 20px; display: block; }
+  .post-title { font-family: var(--display); font-size: clamp(2.4rem, 5vw, 4.5rem); color: var(--white); letter-spacing: 0.02em; line-height: 0.95; margin-bottom: 24px; }
+  .post-meta { font-family: var(--mono); font-size: 0.65rem; color: rgba(136,136,136,0.6); letter-spacing: 0.1em; display: flex; gap: 24px; margin-bottom: 40px; }
+  .post-divider { width: 60px; height: 2px; background: var(--red); margin-bottom: 40px; }
+  .post-body { font-size: 1.1rem; line-height: 1.85; color: var(--light); }
+  .post-body p { margin-bottom: 1.4em; }
+  .post-body h2 { font-family: var(--display); font-size: 2rem; color: var(--white); letter-spacing: 0.04em; margin: 2.5em 0 0.8em; line-height: 1; }
+  .post-body strong { color: var(--white); font-weight: 600; }
+  .post-body em { font-style: italic; color: var(--gray); }
+  .post-share { margin-top: 60px; padding-top: 40px; border-top: 1px solid rgba(255,255,255,0.08); }
+  .post-share h3 { font-family: var(--mono); font-size: 0.7rem; letter-spacing: 0.2em; color: var(--red); text-transform: uppercase; margin-bottom: 20px; }
+  .share-buttons { display: flex; gap: 12px; flex-wrap: wrap; }
+  .share-btn { display: inline-flex; align-items: center; gap: 8px; padding: 10px 20px; font-family: var(--mono); font-size: 0.7rem; letter-spacing: 0.12em; text-transform: uppercase; text-decoration: none; border: 1px solid rgba(255,255,255,0.12); color: var(--gray); cursor: pointer; background: none; transition: all 0.2s; }
+  .share-btn:hover { border-color: var(--red); color: var(--red); }
+  .back-link { display: inline-flex; align-items: center; gap: 8px; font-family: var(--mono); font-size: 0.7rem; letter-spacing: 0.15em; color: var(--gray); text-decoration: none; text-transform: uppercase; margin-bottom: 48px; transition: color 0.2s; }
+  .back-link:hover { color: var(--red); }
+  /* SIDEBAR */
+  .post-sidebar { position: sticky; top: 100px; }
+  .sidebar-section { margin-bottom: 48px; }
+  .sidebar-title { font-family: var(--mono); font-size: 0.65rem; letter-spacing: 0.2em; color: var(--red); text-transform: uppercase; margin-bottom: 20px; padding-bottom: 12px; border-bottom: 1px solid rgba(192,57,43,0.3); }
+  .sidebar-post { display: block; padding: 16px 0; border-bottom: 1px solid rgba(255,255,255,0.05); text-decoration: none; transition: padding-left 0.2s; }
+  .sidebar-post:hover { padding-left: 8px; }
+  .sidebar-post-tag { font-family: var(--mono); font-size: 0.6rem; letter-spacing: 0.15em; color: var(--red); text-transform: uppercase; margin-bottom: 6px; }
+  .sidebar-post-title { font-family: var(--display); font-size: 1.1rem; color: var(--white); letter-spacing: 0.02em; line-height: 1.15; margin-bottom: 6px; }
+  .sidebar-post.active .sidebar-post-title { color: var(--gray); }
+  .sidebar-post-date { font-family: var(--mono); font-size: 0.6rem; color: rgba(136,136,136,0.5); letter-spacing: 0.1em; }
+  .sidebar-yt { display: block; background: var(--card); padding: 20px; text-decoration: none; border: 1px solid rgba(192,57,43,0.2); transition: border-color 0.2s; }
+  .sidebar-yt:hover { border-color: var(--red); }
+  .sidebar-yt-label { font-family: var(--mono); font-size: 0.65rem; letter-spacing: 0.15em; color: var(--red); text-transform: uppercase; margin-bottom: 8px; }
+  .sidebar-yt-text { font-size: 0.9rem; color: var(--light); }
+  @media (max-width: 900px) { .post-layout { grid-template-columns: 1fr; padding: 100px 24px 60px; } .post-sidebar { display: none; } }
+
+</style>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-D540WZZMDB"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-D540WZZMDB');
+</script>
+
+<meta name="keywords" content="jiu-jitsu, BJJ">
+<meta property="og:image" content="https://bjjalemdatecnica.com/LOGO.png">
+<link rel="canonical" href="https://bjjalemdatecnica.com/faixa-branca-para-faixa-azul.html">
+</head>
+<body>
+
+<nav>
+  <a href="index.html" class="nav-logo">
+    <img src="LOGO.png" alt="BJJ Além da Técnica">
+    <div class="nav-logo-text">BJJ <span>Além da Técnica</span></div>
+  </a>
+  <ul class="nav-links">
+    <li><a href="index.html#canal">Canal</a></li>
+    <li><a href="index.html#blog">Blog</a></li>
+    <li><a href="index.html#patrocinadores">Patrocinadores</a></li>
+    <li><a href="index.html#sugestoes">Sugestões</a></li>
+  </ul>
+</nav>
+
+<div class="post-layout">
+  <main class="post-main">
+    <a href="index.html#blog" class="back-link">← Voltar para o Blog</a>
+    <header class="post-header">
+      <span class="post-tag">Fundamentos • Roteiro de Faixas</span>
+      <h1 class="post-title">O Que Se Espera de Um Faixa Branca: o Mapa Completo Até a Faixa Azul</h1>
+      <div class="post-meta">
+        <span>23 de Outubro de 2026</span>
+        <span>7 min de leitura</span>
+      </div>
+      <div class="post-divider"></div>
+    </header>
+    <div class="post-body">
+<p>Você é faixa branca e vive se perguntando "quanto tempo falta pra eu virar azul?" ou "o que eu preciso saber pra receber a próxima faixa?". Ou talvez já seja azul e nunca tenha parado pra pensar no que essa conquista realmente significa.</p>
+<p>Neste texto eu vou te mostrar o que se espera de um faixa branca no Jiu-Jitsu moderno e qual é o mapa da mina pra chegar na azul com confiança e com os fundamentos bem sólidos. É o primeiro de uma série sobre todas as faixas, do branco ao preto.</p>
+<p>Um aviso antes: cada professor tem o seu critério, e o que vem a seguir não é uma lista oficial. É um norte pra você saber onde está e o que falta.</p>
+<h2>Primeira missão: sobreviver e escapar</h2>
+<p>Quando a gente começa, quer finalizar. Quer a guilhotina, o mata-leão, o triângulo. Mas a real é que a primeira coisa que você PRECISA aprender é sobreviver e escapar de finalizações e posições de domínio. É onde você vai passar a maior parte dos seus rolas.</p>
+<p>Os escapes que você precisa ter:</p>
+<ul><li><strong>Saída da montada</strong>, pela upa ou pela técnica que o seu professor ensinou.</li><li><strong>Saída das costas</strong>, protegendo o pescoço, tirando os ganchos e virando pra voltar pra guarda. Essa é ótima porque treina a coordenação de fazer coisas diferentes com braços e pernas ao mesmo tempo.</li><li><strong>Da meia-guarda pra guarda fechada</strong>, e o caminho inverso se você já sabe algumas raspagens da meia.</li><li><strong>Ir pra tartaruga (quatro apoios)</strong> quando alguém está quase passando a sua guarda, se defender ali e avançar pra posições melhores.</li></ul>
+<h2>Os conceitos de sobrevivência</h2>
+<p>Além das técnicas, tem conceitos que vão te salvar pro resto da jornada:</p>
+<p><strong>Cotovelos grudados no corpo.</strong> Você vai tomar muito menos armlock e triângulo, e vai parar de perder esgrima, porque não dá espaço.</p>
+<p><strong>Queixo pra baixo.</strong> Protege contra mata-leão, guilhotina, brabo choke, triângulo de mão. Se você pegar esse hábito cedo, uma de duas coisas vai acontecer: ou o parceiro se frustra e desiste do ataque, ou gasta a força do mundo e não arranja nada.</p>
+<p><strong>Frames antes da força.</strong> Use a estrutura dos ossos, as molduras com os braços, pra criar e manter espaço. Não os músculos.</p>
+<p><strong>Nunca chapado de costas.</strong> Imagina que o tatame tem espinhos que só machucam quando as suas costas estão totalmente apoiadas nele. Fazendo meia-guarda? Fica de lado. O cara passou e chegou no cem quilos? Fica de lado.</p>
+<p><strong>Quadril antes da força.</strong> Destrave o quadril o quanto antes. A fuga de quadril resolve quase toda situação em que você está sendo amassado, e o quadril solto é o que dá aquela fluidez que você admira nos graduados.</p>
+<p>Se você domina esses conceitos, já está na frente de boa parte dos faixas brancas por aí.</p>
+<h2>Saber explicar as posições fundamentais</h2>
+<p>Aqui não basta saber o nome. Você precisa entender a mecânica, a pressão e os pontos de controle de cada posição. E um dos melhores jeitos de aprender qualquer coisa, no Jiu-Jitsu e na vida, é tentar ensinar.</p>
+<p>O exercício é este: explique pra você mesmo ou pra um colega as posições abaixo. Se travar ou não tiver clareza, é sinal de que aquela posição precisa de mais atenção.</p>
+<ul><li><strong>Por baixo:</strong> guarda fechada, uma ou duas guardas abertas que você já conhece (aranha, laço, borboleta) e meia-guarda.</li><li><strong>Por cima:</strong> cem quilos (o que você precisa controlar pra ter pressão, quais finalizações saem dali, pra onde você progride), montada, pegada das costas e meia-guarda por cima.</li></ul>
+<p>Você não precisa ser mestre nessas posições. Precisa entender o que as torna efetivas, os pontos fortes e fracos, e o que dá pra fazer a partir de cada uma.</p>
+<h2>Meia dúzia de raspagens que sempre funcionam</h2>
+<p>Muita gente acha que precisa saber 50 raspagens. Mentira. Você não precisa nem de 20. Precisa de meia dúzia que funcionam e te tiram das maiores enrascadas. Algumas sugestões de alta porcentagem:</p>
+<ul><li><strong>Da guarda fechada:</strong> a upa (raspagem de quadril quando o cara está com a postura ereta), a tesoura, o pêndulo (ótimo quando bloqueiam a tesoura) e a puxada de gola e manga pra pegar as costas, ou o arm drag no melhor estilo Marcelinho Garcia.</li><li><strong>Da guarda aberta e da meia-guarda:</strong> a raspagem de tripé com os pés no quadril (aqui na gringa chamam de dummy sweep) e a raspagem da meia-guarda ganhando a esgrima.</li></ul>
+<p>Escolha cinco ou seis e tente aplicar todas as vezes que estiver fazendo guarda.</p>
+<h2>Finalizações: o básico bem feito</h2>
+<p>Opinião minha: faixa branca só precisa de finalizações fundamentais e de alta porcentagem. Nada de tentar a chave de panturrilha que você viu num vídeo de 30 segundos no Instagram.</p>
+<ul><li><strong>Da guarda:</strong> estrangulamento de gola cruzada (o mais clássico de todos) e triângulo.</li><li><strong>Por cima:</strong> guilhotina quando o cara expõe o pescoço, armlock (da montada, do cem quilos ou da guarda, dedique bastante tempo a ele porque aparece de todo lugar), americana do cem quilos e kimura, que também sai de quase qualquer posição e serve pra atacar, defender e raspar.</li></ul>
+<p>Saber aplicar e explicar essas técnicas já é arsenal suficiente pra um faixa azul.</p>
+<h2>Passagens de guarda</h2>
+<p>Você pode ter as melhores raspagens e finalizações do mundo, mas sem passar a guarda não chega em posição de domínio. Como faixa branca, você precisa conseguir passar a guarda de quem tem o mesmo tempo de treino ou menos. Quatro caminhos pra estudar:</p>
+<ul><li><strong>Knee cut</strong>, a passagem cortando com o joelho pelo meio.</li><li><strong>Toreando</strong>, jogando as pernas do cara pro lado.</li><li><strong>Emborcando</strong>, passando por baixo das duas pernas.</li><li><strong>Abrir a guarda fechada e passar.</strong></li></ul>
+<p>Com esses quatro, você lida com a grande maioria das guardas que vai encontrar nessa fase.</p>
+<h2>Movimento e drills</h2>
+<p>Técnica sem movimento é inútil. Você pode saber todas as passagens, mas se o corpo não se mexe bem, não executa. Um checklist pra fazer toda semana: fuga de quadril (normal e reversa), ponte, levantada técnica, upa, sprawl e recuperação de guarda na parede pra coordenar pernas e quadril.</p>
+<p>Treinando isso com frequência, todo o resto fica mais fácil. Porque o Jiu-Jitsu não é uma coleção de técnicas. É um sistema de movimentos.</p>
+<h2>Quanto tempo leva pra pegar a azul?</h2>
+<p>Depende. Cada um tem a sua jornada. Mas como parâmetro, a maioria chega na azul entre 12 e 24 meses, treinando de forma consistente duas a três vezes por semana e mostrando progresso visível em escapes, guarda, passagem e controle. Tem gente que leva seis ou sete meses, tem gente que leva três anos. O importante não é o tempo, é o desenvolvimento. Com o mapa acima, você consegue enxergar onde estão os seus pontos fortes e as suas fraquezas.</p>
+<p>E no rola, o seu objetivo como faixa branca é: posição antes da finalização, rolar leve, controlado e com intenção, não muscular as posições, fazer perguntas depois da aula e manter a consistência. Melhor treinar duas vezes por semana por dois anos do que cinco vezes por semana por três meses e sumir.</p>
+<h2>A mentalidade de quem chega lá</h2>
+<p>Faixa azul não é sobre talento, é sobre mentalidade. Consistência pra aparecer e repetir. Humildade pra aceitar que você vai apanhar muito, ser mais finalizado do que finalizar, e que tá tudo bem. Paciência. Calma sob pressão: cada amasso é uma chance de aprender a ficar tranquilo enquanto o cara te sufoca. Repetição, fazer a mesma técnica centenas de vezes até ficar automática. Aparecer mesmo cansado, nos dias bons e nos ruins. E nunca ter medo de perguntar: tem muita gente que perde oportunidades de ouro por vergonha de abrir a boca.</p>
+<p>A frase mais importante de todas: <strong>faixa azul é a prova de que você não desistiu.</strong> Todo mundo quer a faixa preta, mas poucos estão dispostos a ser faixa branca por tempo suficiente.</p>
+<h2>O que significa ser faixa azul</h2>
+<p>Um faixa azul sobrevive com confiança, sem pânico quando é montado ou tem as costas pegas. Escapa de forma confiável, sem força bruta. Passa vários tipos de guarda. Raspa e finaliza com fundamento, porque a técnica é sólida e não porque é mais forte. Fica calmo e técnico no rola. E consegue ajudar os novatos com o básico.</p>
+<p>Faixa azul não é ser incrível. É ter uma base sólida e ferramentas confiáveis. É deixar de ser um completo iniciante e saber o que está fazendo.</p>
+<h2>Recapitulando</h2>
+<ul><li>Sobreviva e escape primeiro.</li><li>Entenda as posições fundamentais, por cima e por baixo.</li><li>Domine pelo menos seis raspagens e seis finalizações.</li><li>Aprenda algumas passagens de guarda.</li><li>Treine movimento constantemente.</li><li>Seja consistente: duas a três vezes por semana, no mínimo.</li><li>Cultive humildade, paciência e curiosidade.</li></ul>
+<p>No próximo texto da série, o assunto é o que se espera de um faixa azul e como chegar na roxa.</p>
+<p>Nos vemos no tatame. Oss!</p>
+<h2>Assista ao vídeo</h2>
+<div style="position:relative;padding-bottom:56.25%;height:0;overflow:hidden;margin-bottom:1.4em"><iframe style="position:absolute;top:0;left:0;width:100%;height:100%;border:0" src="https://www.youtube.com/embed/m8gPYHlFw34" title="O Que Se Espera de Um Faixa Branca: o Mapa Completo Até a Faixa Azul" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
+<div style="background:var(--card);border:1px solid rgba(192,57,43,0.3);padding:28px;margin-top:2em"><p style="font-family:var(--display);font-size:1.6rem;color:var(--white);margin-bottom:0.4em">Receba conteúdo como esse no seu e-mail</p><p>Toda semana eu mando pra newsletter um conteúdo pensado pra quem treina de verdade, tem trabalho, família e quer evoluir no tatame sem enrolação. É de graça.</p><p><a href="/newsletter" class="share-btn" style="color:var(--red);border-color:var(--red)">Quero entrar na newsletter →</a></p></div>
+    </div>
+    <div class="post-share">
+      <h3>Compartilhar este post</h3>
+      <div class="share-buttons">
+        <a href="https://wa.me/?text=O Que Se Espera de Um Faixa Branca: o Mapa Completo Até a Faixa Azul%20https://bjjalemdatecnica.com/faixa-branca-para-faixa-azul.html" target="_blank" class="share-btn">📱 WhatsApp</a>
+        <a href="https://twitter.com/intent/tweet?text=O Que Se Espera de Um Faixa Branca: o Mapa Completo Até a Faixa Azul&url=https://bjjalemdatecnica.com/faixa-branca-para-faixa-azul.html" target="_blank" class="share-btn">𝕏 Twitter</a>
+        <button class="share-btn" onclick="navigator.clipboard.writeText('https://bjjalemdatecnica.com/faixa-branca-para-faixa-azul.html');this.textContent='✓ Copiado!'">🔗 Copiar link</button>
+      </div>
+    </div>
+  </main>
+  <aside class="post-sidebar">
+<div class="sidebar-section">
+<div class="sidebar-title">Outros Posts</div>
+<a href="verdades-brutais-sobre-jiu-jitsu.html" class="sidebar-post">
+<div class="sidebar-post-tag">Mentalidade • Jornada</div>
+<div class="sidebar-post-title">7 Verdades Brutais Sobre o Jiu-Jitsu Que Ninguém Te Conta</div>
+<div class="sidebar-post-date">Outubro 2026 · 7 min</div>
+</a>
+<a href="comecar-jiu-jitsu-depois-dos-40.html" class="sidebar-post">
+<div class="sidebar-post-tag">Mentalidade • Masters</div>
+<div class="sidebar-post-title">Nunca É Tarde: Por Que Começar Jiu-Jitsu Depois dos 40 Faz Sentido em 2026</div>
+<div class="sidebar-post-date">Outubro 2026 · 8 min</div>
+</a>
+<a href="post-masters-35.html" class="sidebar-post">
+<div class="sidebar-post-tag">Mentalidade • Masters</div>
+<div class="sidebar-post-title">Como Treinar 4x Por Semana Depois dos 35 Sem Se Quebrar</div>
+<div class="sidebar-post-date">Fevereiro 2025 · 10 min</div>
+</a>
+<a href="post-roger-gracie.html" class="sidebar-post">
+<div class="sidebar-post-tag">História • Inspiração</div>
+<div class="sidebar-post-title">O GOAT Que Ninguém Apostava: A História Real de Roger Gracie</div>
+<div class="sidebar-post-date">Janeiro 2025 · 12 min</div>
+</a>
+</div>
+<div class="sidebar-section">
+<div class="sidebar-title">Canal no YouTube</div>
+<a href="https://www.youtube.com/@BJJAlemDaTecnica" target="_blank" class="sidebar-yt">
+<div class="sidebar-yt-label">▶ Assista também</div>
+<div class="sidebar-yt-text">Novos vídeos toda semana no canal BJJ Além da Técnica</div>
+</a>
+</div>
+</aside>
+
+</div>
+<div class="red-divider"></div>
+
+<footer>
+  <div>
+    <div class="footer-logo">
+      <img src="LOGO.png" alt="BJJ Além da Técnica">
+      <p>O tatame como escola de vida. Técnica, filosofia e tudo que está além do movimento.</p>
+    </div>
+    <div class="footer-links">
+      <h4>Navegação</h4>
+      <ul>
+        <li><a href="index.html#canal">Último Vídeo</a></li>
+        <li><a href="index.html#blog">Blog</a></li>
+        <li><a href="index.html#patrocinadores">Patrocinadores</a></li>
+        <li><a href="index.html#sugestoes">Sugestões</a></li>
+      </ul>
+    </div>
+    <div class="footer-links">
+      <h4>Contato</h4>
+      <ul>
+        <li><a href="https://www.youtube.com/@BJJAlemDaTecnica" target="_blank">YouTube</a></li>
+        <li><a href="mailto:contato@bjjalemdatecnica.com">contato@bjjalemdatecnica.com</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span>© 2026 BJJ Além da Técnica — bjjalemdatecnica.com</span>
+    <span>OSS</span>
+  </div>
+</footer>
+<script>
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(el => { if (el.isIntersecting) el.target.classList.add('visible'); });
+  }, { threshold: 0.1 });
+  document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+</script>
+
+</body>
+</html>
