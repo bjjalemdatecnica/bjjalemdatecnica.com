@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Como Descobrir e Corrigir Suas Fraquezas no Jiu-Jitsu: Autoavaliação e o Mindset do Cobrinha — BJJ Além da Técnica</title>
+<meta name="description" content="Evoluir no Jiu-Jitsu sem se autoavaliar é navegar sem bússola. A escala de 1 a 4 pra medir cada técnica e o passo a passo do mindset do Cobrinha pra transformar fraquezas em forças.">
+<meta property="og:title" content="Como Descobrir e Corrigir Suas Fraquezas no Jiu-Jitsu: Autoavaliação e o Mindset do Cobrinha">
+<meta property="og:description" content="Evoluir no Jiu-Jitsu sem se autoavaliar é navegar sem bússola. A escala de 1 a 4 pra medir cada técnica e o passo a passo do mindset do Cobrinha pra transformar fraquezas em forças.">
+<meta property="og:url" content="https://bjjalemdatecnica.com/autoavaliacao-e-fraquezas-no-jiu-jitsu.html">
+<meta property="og:type" content="article">
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Crimson+Pro:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Share+Tech+Mono&display=swap" rel="stylesheet">
+<style>
+
+  :root {
+    --black: #0a0a0a; --deep: #111111; --surface: #1a1a1a; --card: #1e1e1e;
+    --red: #c0392b; --red-hot: #e74c3c; --red-dim: #7b1a13;
+    --gray: #888; --light: #cccccc; --white: #f0f0f0;
+    --mono: 'Share Tech Mono', monospace;
+    --display: 'Bebas Neue', sans-serif;
+    --body: 'Crimson Pro', serif;
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body { background: var(--black); color: var(--light); font-family: var(--body); font-size: 18px; line-height: 1.7; overflow-x: hidden; }
+  body::before { content: ''; position: fixed; inset: 0; background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.04'/%3E%3C/svg%3E"); pointer-events: none; z-index: 999; opacity: 0.4; }
+  nav { position: fixed; top: 0; width: 100%; z-index: 100; padding: 12px 48px; display: flex; justify-content: space-between; align-items: center; background: linear-gradient(to bottom, rgba(10,10,10,0.98), transparent); backdrop-filter: blur(4px); }
+  .nav-logo { display: flex; align-items: center; gap: 12px; text-decoration: none; }
+  .nav-logo img { height: 52px; width: auto; }
+  .nav-logo-text { font-family: var(--display); font-size: 1.1rem; letter-spacing: 0.1em; color: var(--white); line-height: 1.1; }
+  .nav-logo-text span { color: var(--red); display: block; }
+  .nav-links { display: flex; gap: 36px; list-style: none; }
+  .nav-links a { font-family: var(--mono); font-size: 0.75rem; letter-spacing: 0.15em; color: var(--gray); text-decoration: none; text-transform: uppercase; transition: color 0.2s; }
+  .nav-links a:hover { color: var(--red); }
+  .red-divider { width: 100%; height: 1px; background: linear-gradient(to right, transparent, var(--red-dim), transparent); }
+  footer { background: var(--deep); border-top: 1px solid rgba(192,57,43,0.2); padding: 60px 48px 40px; }
+  footer > div { max-width: 1200px; margin: 0 auto; display: flex; justify-content: space-between; align-items: flex-start; gap: 40px; flex-wrap: wrap; }
+  .footer-logo img { height: 64px; width: auto; margin-bottom: 12px; display: block; }
+  .footer-logo p { font-size: 0.9rem; color: var(--gray); font-style: italic; max-width: 280px; }
+  .footer-links h4 { font-family: var(--mono); font-size: 0.65rem; letter-spacing: 0.2em; color: var(--red); text-transform: uppercase; margin-bottom: 16px; }
+  .footer-links ul { list-style: none; }
+  .footer-links li { margin-bottom: 10px; }
+  .footer-links a { font-size: 0.9rem; color: var(--gray); text-decoration: none; transition: color 0.2s; }
+  .footer-links a:hover { color: var(--white); }
+  .footer-bottom { max-width: 1200px; margin: 40px auto 0; padding-top: 24px; border-top: 1px solid rgba(255,255,255,0.05); font-family: var(--mono); font-size: 0.65rem; color: rgba(136,136,136,0.4); letter-spacing: 0.1em; display: flex; justify-content: space-between; flex-wrap: wrap; gap: 12px; }
+  @keyframes fadeUp { from { opacity: 0; transform: translateY(24px); } to { opacity: 1; transform: translateY(0); } }
+  .reveal { opacity: 0; transform: translateY(32px); transition: opacity 0.7s ease, transform 0.7s ease; }
+  .reveal.visible { opacity: 1; transform: translateY(0); }
+  @media (max-width: 768px) { nav { padding: 12px 24px; } .nav-links { display: none; } footer { padding: 40px 24px 24px; } }
+
+
+  .post-layout { display: grid; grid-template-columns: 1fr 320px; gap: 60px; max-width: 1200px; margin: 0 auto; padding: 120px 48px 80px; align-items: start; }
+  .post-main {}
+  .post-header { margin-bottom: 48px; }
+  .post-tag { font-family: var(--mono); font-size: 0.65rem; letter-spacing: 0.2em; color: var(--red); text-transform: uppercase; margin-bottom: 20px; display: block; }
+  .post-title { font-family: var(--display); font-size: clamp(2.4rem, 5vw, 4.5rem); color: var(--white); letter-spacing: 0.02em; line-height: 0.95; margin-bottom: 24px; }
+  .post-meta { font-family: var(--mono); font-size: 0.65rem; color: rgba(136,136,136,0.6); letter-spacing: 0.1em; display: flex; gap: 24px; margin-bottom: 40px; }
+  .post-divider { width: 60px; height: 2px; background: var(--red); margin-bottom: 40px; }
+  .post-body { font-size: 1.1rem; line-height: 1.85; color: var(--light); }
+  .post-body p { margin-bottom: 1.4em; }
+  .post-body h2 { font-family: var(--display); font-size: 2rem; color: var(--white); letter-spacing: 0.04em; margin: 2.5em 0 0.8em; line-height: 1; }
+  .post-body strong { color: var(--white); font-weight: 600; }
+  .post-body em { font-style: italic; color: var(--gray); }
+  .post-share { margin-top: 60px; padding-top: 40px; border-top: 1px solid rgba(255,255,255,0.08); }
+  .post-share h3 { font-family: var(--mono); font-size: 0.7rem; letter-spacing: 0.2em; color: var(--red); text-transform: uppercase; margin-bottom: 20px; }
+  .share-buttons { display: flex; gap: 12px; flex-wrap: wrap; }
+  .share-btn { display: inline-flex; align-items: center; gap: 8px; padding: 10px 20px; font-family: var(--mono); font-size: 0.7rem; letter-spacing: 0.12em; text-transform: uppercase; text-decoration: none; border: 1px solid rgba(255,255,255,0.12); color: var(--gray); cursor: pointer; background: none; transition: all 0.2s; }
+  .share-btn:hover { border-color: var(--red); color: var(--red); }
+  .back-link { display: inline-flex; align-items: center; gap: 8px; font-family: var(--mono); font-size: 0.7rem; letter-spacing: 0.15em; color: var(--gray); text-decoration: none; text-transform: uppercase; margin-bottom: 48px; transition: color 0.2s; }
+  .back-link:hover { color: var(--red); }
+  /* SIDEBAR */
+  .post-sidebar { position: sticky; top: 100px; }
+  .sidebar-section { margin-bottom: 48px; }
+  .sidebar-title { font-family: var(--mono); font-size: 0.65rem; letter-spacing: 0.2em; color: var(--red); text-transform: uppercase; margin-bottom: 20px; padding-bottom: 12px; border-bottom: 1px solid rgba(192,57,43,0.3); }
+  .sidebar-post { display: block; padding: 16px 0; border-bottom: 1px solid rgba(255,255,255,0.05); text-decoration: none; transition: padding-left 0.2s; }
+  .sidebar-post:hover { padding-left: 8px; }
+  .sidebar-post-tag { font-family: var(--mono); font-size: 0.6rem; letter-spacing: 0.15em; color: var(--red); text-transform: uppercase; margin-bottom: 6px; }
+  .sidebar-post-title { font-family: var(--display); font-size: 1.1rem; color: var(--white); letter-spacing: 0.02em; line-height: 1.15; margin-bottom: 6px; }
+  .sidebar-post.active .sidebar-post-title { color: var(--gray); }
+  .sidebar-post-date { font-family: var(--mono); font-size: 0.6rem; color: rgba(136,136,136,0.5); letter-spacing: 0.1em; }
+  .sidebar-yt { display: block; background: var(--card); padding: 20px; text-decoration: none; border: 1px solid rgba(192,57,43,0.2); transition: border-color 0.2s; }
+  .sidebar-yt:hover { border-color: var(--red); }
+  .sidebar-yt-label { font-family: var(--mono); font-size: 0.65rem; letter-spacing: 0.15em; color: var(--red); text-transform: uppercase; margin-bottom: 8px; }
+  .sidebar-yt-text { font-size: 0.9rem; color: var(--light); }
+  @media (max-width: 900px) { .post-layout { grid-template-columns: 1fr; padding: 100px 24px 60px; } .post-sidebar { display: none; } }
+
+</style>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-D540WZZMDB"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-D540WZZMDB');
+</script>
+
+<meta name="keywords" content="jiu-jitsu, BJJ">
+<meta property="og:image" content="https://bjjalemdatecnica.com/LOGO.png">
+<link rel="canonical" href="https://bjjalemdatecnica.com/autoavaliacao-e-fraquezas-no-jiu-jitsu.html">
+</head>
+<body>
+
+<nav>
+  <a href="index.html" class="nav-logo">
+    <img src="LOGO.png" alt="BJJ Além da Técnica">
+    <div class="nav-logo-text">BJJ <span>Além da Técnica</span></div>
+  </a>
+  <ul class="nav-links">
+    <li><a href="index.html#canal">Canal</a></li>
+    <li><a href="index.html#blog">Blog</a></li>
+    <li><a href="index.html#patrocinadores">Patrocinadores</a></li>
+    <li><a href="index.html#sugestoes">Sugestões</a></li>
+  </ul>
+</nav>
+
+<div class="post-layout">
+  <main class="post-main">
+    <a href="index.html#blog" class="back-link">← Voltar para o Blog</a>
+    <header class="post-header">
+      <span class="post-tag">Mentalidade • Evolução</span>
+      <h1 class="post-title">Como Descobrir e Corrigir Suas Fraquezas no Jiu-Jitsu: Autoavaliação e o Mindset do Cobrinha</h1>
+      <div class="post-meta">
+        <span>13 de Novembro de 2026</span>
+        <span>8 min de leitura</span>
+      </div>
+      <div class="post-divider"></div>
+    </header>
+    <div class="post-body">
+<p>Você já parou pra pensar que evoluir no Jiu-Jitsu sem se autoavaliar é como navegar num oceano sem bússola? Você sabe que precisa ir pra frente, mas acaba dando voltas no mesmo lugar, desperdiçando energia e tempo precioso no tatame.</p>
+<p>Ou, se preferir outra imagem: treinar por anos sem olhar pras próprias falhas é como montar um carro de corrida sem manual. Você tem todas as peças. Algumas sabe onde vão, outras deixa de lado e torce pro carro funcionar. Ele roda, mas várias funções ficam de fora. O que ficou de fora são as suas fraquezas.</p>
+<p>Este texto tem duas partes. Na primeira, como fazer uma autoavaliação de verdade e enxergar onde estão os buracos do seu jogo. Na segunda, um passo a passo inspirado no mindset do Cobrinha, um dos meus lutadores favoritos, pra transformar esses buracos em pontos fortes.</p>
+<h2>Por que a autoavaliação vem primeiro</h2>
+<p>Entender onde você está é essencial pra saber onde quer chegar. Muita gente acha que basta ir pra academia, assistir à aula e rolar. Isso é o básico, e o básico te leva só até certo ponto.</p>
+<h2>Seja um aluno proativo</h2>
+<p>Ser proativo muda tudo. Significa não esperar tudo do instrutor. Ele é a bússola, aponta o caminho, mas quem traça a rota é você. Vá atrás de conhecimento fora da academia: vídeos, livros, podcasts. Viva e respire Jiu-Jitsu.</p>
+<p>Treine com inteligência e curiosidade. Quando você assume a responsabilidade pelo seu progresso, o jogo vira. Eu vejo isso o tempo todo: quem busca mais se destaca, ganha confiança e evolui mais rápido. E o seu professor percebe e fica ainda mais animado pra te ajudar. Pensa bem: o maior interessado no seu progresso é você.</p>
+<h2>O erro do aprendizado passivo</h2>
+<p>O erro mais comum que eu vejo é o modo passivo: esperar que toda a informação pra virar faixa preta venha da academia. Você assiste à aula, treina o que ensinam, e não busca mais nada por conta própria.</p>
+<p>Isso limita o seu potencial de forma absurda. O Jiu-Jitsu exige adaptação constante, e esperar tudo de fora te deixa dependente e lento. Você nunca desenvolve a confiança pra crescer sozinho, que vem justamente de se colocar em situações difíceis, estudar, errar e corrigir os próprios erros.</p>
+<p>E acredite: professor adora aluno com vontade de aprender. Quando você corrige falhas por iniciativa própria, se destaca e recebe mais atenção.</p>
+<h2>A autoavaliação como lupa</h2>
+<p>Se você não sabe quais são as suas fraquezas, como vai melhorar? Seja honesto, mesmo que não seja fácil. É confortável focar no que você já faz bem, mas isso te mantém estagnado. Admitir fraquezas exige coragem, e é essa coragem que te leva pro próximo nível.</p>
+<p>O Jiu-Jitsu é uma luta contra o ego, e reconhecer as falhas é a primeira vitória. Um exercício mental útil: pense como o seu próprio adversário. Onde você exploraria as suas fraquezas? Identifique agora, antes que alguém use contra você no tatame. Essa mentalidade preventiva te deixa proativo em vez de reativo.</p>
+<p>E lembre: nenhum buraco no jogo é permanente. Cada um é uma oportunidade de crescimento. Não fuja dos erros, use-os como ferramenta.</p>
+<h2>Documente o processo</h2>
+<p>Pegue um caderno, o celular ou uma planilha simples e anote as áreas que precisam de atenção. Por exemplo: "tenho dificuldade pra passar guarda aberta contra gente flexível". A partir daí, monte um plano de ação: estude uma técnica específica e pratique com intenção nos rolas.</p>
+<p>A documentação vira um mapa da sua jornada. Você enxerga o progresso ao longo do tempo, e isso motiva demais. Não se frustre com a honestidade, use-a pra tomar o controle. Cada ponto fraco vira um projeto. E, trabalhando assim, você constrói não só técnica, mas uma mentalidade resiliente pros altos e baixos de uma jornada longa.</p>
+<h2>O exercício: a escala de 1 a 4</h2>
+<p>Divida o seu jogo em partes, ofensivas e defensivas. Depois pegue papel, celular ou computador e liste todas as técnicas que você já praticou pelo menos uma vez, agrupadas assim:</p>
+<ul><li>Quedas</li><li>Defesa de quedas</li><li>Passagens de guarda</li><li>Ataques por cima</li><li>Guardas</li><li>Ataques da guarda</li><li>Raspagens</li></ul>
+<p>Agora dê uma nota de 1 a 4 pra cada técnica:</p>
+<ul><li><strong>1:</strong> já viu, mas não lembra como executar bem.</li><li><strong>2:</strong> sabe os passos e acerta de vez em quando em alguém com menos conhecimento.</li><li><strong>3:</strong> acerta com frequência em quem tem menos conhecimento e às vezes em alguém do seu nível.</li><li><strong>4:</strong> acerta em alguém mais graduado.</li></ul>
+<p>Essa lista é o seu ponto de partida. Ela mostra onde estão os buracos e o que priorizar. Categorias cheias de notas 1 e 2 são a sua próxima meta de estudo. Quanto mais esforço você colocar nela agora, mais resultado vai colher depois.</p>
+<h2>Como usar a lista no dia a dia</h2>
+<p>Escolha uma ou duas técnicas com nota baixa numa categoria importante pro seu jogo e foque nelas por algumas semanas. Peça ajuda ao professor, estude fora do tatame, teste nos rolas começando por parceiros menos experientes. Depois de um mês, reavalie. Ver um 1 virar 2, e um 2 virar 3, é a prova concreta de que você está evoluindo, mesmo nos dias em que parece que não.</p>
+<h2>Do diagnóstico à ação: o mindset do Cobrinha</h2>
+<p>Com a lista pronta, você sabe onde estão os buracos. Agora vem a parte que a maioria evita: encarar esses buracos de frente. E aqui eu me inspiro no Cobrinha, multicampeão que segue relevante na arte suave há anos. Em resumo, o mindset dele é encarar os problemas de frente, em vez de fugir deles.</p>
+<h2>Encare a realidade</h2>
+<p>Quanto mais você treina, mais se especializa em alguma coisa. Ótimo! Mas isso cria fraquezas em outras áreas. A maioria das pessoas foge delas, e o problema é que elas te acompanham conforme você sobe de nível. Melhor resolver agora do que carregar o buraco até a faixa roxa.</p>
+<h2>Passo 1: identifique as fraquezas</h2>
+<p>Seja brutalmente honesto. Use a lista de 1 a 4 que você acabou de montar, e complemente perguntando ao seu professor ou a alguém mais graduado. Alguns exemplos: passam a sua meia-guarda sempre? A sua defesa de queda é inexistente? O braço sempre escapa quando você tenta o armlock?</p>
+<p>Nomeie o problema em voz alta, ou melhor, escreva. Quando você dá nome aos bois, fica mais fácil aceitar que algo precisa mudar.</p>
+<h2>Passo 2: busque quem sabe mais</h2>
+<p>Identificou o buraco? Agora procure ajuda. Instrucionais e vídeos no YouTube ajudam, mas o ideal é alguém te observando ao vivo. Peça ao professor ou a alguém mais graduado pra analisar o seu rola, apontar os erros e sugerir ajustes pontuais pra aquela falha. Monte um plano com essa pessoa e siga trabalhando até resolver.</p>
+<h2>Passo 3: siga o plano</h2>
+<p>Não abandone depois de duas semanas porque "tá difícil". Você não precisa de 10 mil horas pra virar mestre naquele armlock da montada, mas umas 20 a 50 horas de trabalho focado já são suficientes pra dar trabalho pra muita gente.</p>
+<p>Eu sei que repetir a mesma coisa muitas vezes pode ser chato. Mas é essa consistência que supera a falta de talento. Marque na agenda: "hoje, 30 minutos de drill na fraqueza X". O Jiu-Jitsu premia quem persiste, não quem desiste.</p>
+<h2>Passo 4: teste sob pressão</h2>
+<p>Não treine no espelho e ache que melhorou. Aplique em rola de verdade, com resistência. Arrisque falhar, porque é aí que você aprende. Pode tomar uma surra, tudo bem. Teste o carro na estrada, não na garagem.</p>
+<p>Comece com alguém que treina há bem menos tempo que você e vá subindo o desafio. Assim você ganha confiança na técnica antes de enfrentar quem resiste mais.</p>
+<p>Dica bônus: registre as suas reflexões. Pode ser no papel ou no celular. Uma ideia que eu uso é criar um grupo de WhatsApp só com você mesmo, chamado "Diário após treinos", e escrever pelo menos um parágrafo de observações depois de cada treino. Em poucos meses, você tem um histórico do que funcionou, do que não funcionou e de como evoluiu.</p>
+<h2>Passo 5: repita, com consciência</h2>
+<p>As primeiras tentativas falham na maioria das vezes. Aconteceu comigo. Mas ajuste, busque mais conhecimento e invista tempo, que a melhora vira inevitável. Volte ao professor, assista vídeos novos, refine. Da branca à preta é isso: treinar, errar, corrigir. É polir uma pedra até ela virar joia.</p>
+<h2>O que evitar</h2>
+<ul><li><strong>Repetição no piloto automático.</strong> O cérebro aprende corrigindo, não acumulando volume sem atenção.</li><li><strong>Mudar muitas variáveis ao mesmo tempo.</strong> Simplifique. Uma fraqueza por vez.</li><li><strong>Drill sem contexto.</strong> Integre pressão e resistência pra que o treino faça sentido no Jiu-Jitsu real.</li></ul>
+<h2>Por que o mindset do Cobrinha funciona</h2>
+<p>O que mais me chama atenção nesse mindset é que ele tira o ego do caminho. Encarar a fraqueza de frente significa aceitar que você vai parecer ruim por um tempo naquela área: tomar passagem, perder a posição, ser finalizado. A maioria prefere esconder o buraco e continuar fazendo o que já sabe. Quem aceita esse desconforto temporário é quem, lá na frente, tem um jogo sem pontos cegos.</p>
+<h2>Recapitulando</h2>
+<ul><li>Seja um aluno proativo: o professor é a bússola, mas quem traça a rota é você.</li><li>Liste as suas técnicas por categoria e dê notas de 1 a 4.</li><li>Escolha a fraqueza, dê nome a ela e busque quem sabe mais.</li><li>Siga o plano com consistência e teste sob pressão real, subindo o desafio aos poucos.</li><li>Registre tudo, reavalie as notas e repita.</li></ul>
+<p>Consistência bate talento quando o talento não é consistente. Se você está estagnado, lembre: todo faixa preta começou assim, sendo proativo e persistente.</p>
+<p>Nos vemos no tatame. Oss!</p>
+<h2>Assista aos vídeos</h2>
+<div style="position:relative;padding-bottom:56.25%;height:0;overflow:hidden;margin-bottom:1.4em"><iframe style="position:absolute;top:0;left:0;width:100%;height:100%;border:0" src="https://www.youtube.com/embed/cGx63rL57PI" title="Como Descobrir e Corrigir Suas Fraquezas no Jiu-Jitsu: Autoavaliação e o Mindset do Cobrinha" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
+<div style="position:relative;padding-bottom:56.25%;height:0;overflow:hidden;margin-bottom:1.4em"><iframe style="position:absolute;top:0;left:0;width:100%;height:100%;border:0" src="https://www.youtube.com/embed/GoihCuerCxI" title="Como Descobrir e Corrigir Suas Fraquezas no Jiu-Jitsu: Autoavaliação e o Mindset do Cobrinha" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
+<div style="background:var(--card);border:1px solid rgba(192,57,43,0.3);padding:28px;margin-top:2em"><p style="font-family:var(--display);font-size:1.6rem;color:var(--white);margin-bottom:0.4em">Receba conteúdo como esse no seu e-mail</p><p>Toda semana eu mando pra newsletter um conteúdo pensado pra quem treina de verdade, tem trabalho, família e quer evoluir no tatame sem enrolação. É de graça.</p><p><a href="/newsletter" class="share-btn" style="color:var(--red);border-color:var(--red)">Quero entrar na newsletter →</a></p></div>
+    </div>
+    <div class="post-share">
+      <h3>Compartilhar este post</h3>
+      <div class="share-buttons">
+        <a href="https://wa.me/?text=Como Descobrir e Corrigir Suas Fraquezas no Jiu-Jitsu: Autoavaliação e o Mindset do Cobrinha%20https://bjjalemdatecnica.com/autoavaliacao-e-fraquezas-no-jiu-jitsu.html" target="_blank" class="share-btn">📱 WhatsApp</a>
+        <a href="https://twitter.com/intent/tweet?text=Como Descobrir e Corrigir Suas Fraquezas no Jiu-Jitsu: Autoavaliação e o Mindset do Cobrinha&url=https://bjjalemdatecnica.com/autoavaliacao-e-fraquezas-no-jiu-jitsu.html" target="_blank" class="share-btn">𝕏 Twitter</a>
+        <button class="share-btn" onclick="navigator.clipboard.writeText('https://bjjalemdatecnica.com/autoavaliacao-e-fraquezas-no-jiu-jitsu.html');this.textContent='✓ Copiado!'">🔗 Copiar link</button>
+      </div>
+    </div>
+  </main>
+  <aside class="post-sidebar">
+<div class="sidebar-section">
+<div class="sidebar-title">Outros Posts</div>
+<a href="4-principios-do-jiu-jitsu-faixa-branca.html" class="sidebar-post">
+<div class="sidebar-post-tag">Fundamentos • Filosofia</div>
+<div class="sidebar-post-title">Os 4 Princípios Que Todo Faixa Branca Precisa Saber (Dentro e Fora do Tatame)</div>
+<div class="sidebar-post-date">Novembro 2026 · 7 min</div>
+</a>
+<a href="filho-no-jiu-jitsu-o-que-todo-pai-precisa-saber.html" class="sidebar-post">
+<div class="sidebar-post-tag">Família • Jiu-Jitsu Infantil</div>
+<div class="sidebar-post-title">Coloquei Meu Filho no Jiu-Jitsu: O Que Todo Pai Precisa Saber Antes</div>
+<div class="sidebar-post-date">Novembro 2026 · 7 min</div>
+</a>
+<a href="tipos-de-colegas-de-treino.html" class="sidebar-post">
+<div class="sidebar-post-tag">Mentalidade • Treino Inteligente</div>
+<div class="sidebar-post-title">Os 4 Tipos de Colegas de Treino e Como Usar Cada Um Pra Evoluir no Jiu-Jitsu</div>
+<div class="sidebar-post-date">Novembro 2026 · 6 min</div>
+</a>
+<a href="retorno-ao-jiu-jitsu-depois-de-parar.html" class="sidebar-post">
+<div class="sidebar-post-tag">Mentalidade • Retorno</div>
+<div class="sidebar-post-title">Como Voltar ao Jiu-Jitsu Depois de Lesão ou de um Tempo Parado</div>
+<div class="sidebar-post-date">Outubro 2026 · 6 min</div>
+</a>
+</div>
+<div class="sidebar-section">
+<div class="sidebar-title">Canal no YouTube</div>
+<a href="https://www.youtube.com/@BJJAlemDaTecnica" target="_blank" class="sidebar-yt">
+<div class="sidebar-yt-label">▶ Assista também</div>
+<div class="sidebar-yt-text">Novos vídeos toda semana no canal BJJ Além da Técnica</div>
+</a>
+</div>
+</aside>
+
+</div>
+<div class="red-divider"></div>
+
+<footer>
+  <div>
+    <div class="footer-logo">
+      <img src="LOGO.png" alt="BJJ Além da Técnica">
+      <p>O tatame como escola de vida. Técnica, filosofia e tudo que está além do movimento.</p>
+    </div>
+    <div class="footer-links">
+      <h4>Navegação</h4>
+      <ul>
+        <li><a href="index.html#canal">Último Vídeo</a></li>
+        <li><a href="index.html#blog">Blog</a></li>
+        <li><a href="index.html#patrocinadores">Patrocinadores</a></li>
+        <li><a href="index.html#sugestoes">Sugestões</a></li>
+      </ul>
+    </div>
+    <div class="footer-links">
+      <h4>Contato</h4>
+      <ul>
+        <li><a href="https://www.youtube.com/@BJJAlemDaTecnica" target="_blank">YouTube</a></li>
+        <li><a href="mailto:contato@bjjalemdatecnica.com">contato@bjjalemdatecnica.com</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span>© 2026 BJJ Além da Técnica — bjjalemdatecnica.com</span>
+    <span>OSS</span>
+  </div>
+</footer>
+<script>
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(el => { if (el.isIntersecting) el.target.classList.add('visible'); });
+  }, { threshold: 0.1 });
+  document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+</script>
+
+</body>
+</html>
