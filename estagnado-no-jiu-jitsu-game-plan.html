@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Estagnado no Jiu-Jitsu? Os 3 Erros Que Te Travam e o Game Plan Que Te Destrava — BJJ Além da Técnica</title>
+<meta name="description" content="Sente que não evolui mais? Os 3 erros que levam ao desânimo no Jiu-Jitsu e como montar um game plan em 3 passos, inspirado na RosieRollz, pra parar de rolar no aleatório.">
+<meta property="og:title" content="Estagnado no Jiu-Jitsu? Os 3 Erros Que Te Travam e o Game Plan Que Te Destrava">
+<meta property="og:description" content="Sente que não evolui mais? Os 3 erros que levam ao desânimo no Jiu-Jitsu e como montar um game plan em 3 passos, inspirado na RosieRollz, pra parar de rolar no aleatório.">
+<meta property="og:url" content="https://bjjalemdatecnica.com/estagnado-no-jiu-jitsu-game-plan.html">
+<meta property="og:type" content="article">
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Crimson+Pro:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Share+Tech+Mono&display=swap" rel="stylesheet">
+<style>
+
+  :root {
+    --black: #0a0a0a; --deep: #111111; --surface: #1a1a1a; --card: #1e1e1e;
+    --red: #c0392b; --red-hot: #e74c3c; --red-dim: #7b1a13;
+    --gray: #888; --light: #cccccc; --white: #f0f0f0;
+    --mono: 'Share Tech Mono', monospace;
+    --display: 'Bebas Neue', sans-serif;
+    --body: 'Crimson Pro', serif;
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body { background: var(--black); color: var(--light); font-family: var(--body); font-size: 18px; line-height: 1.7; overflow-x: hidden; }
+  body::before { content: ''; position: fixed; inset: 0; background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.04'/%3E%3C/svg%3E"); pointer-events: none; z-index: 999; opacity: 0.4; }
+  nav { position: fixed; top: 0; width: 100%; z-index: 100; padding: 12px 48px; display: flex; justify-content: space-between; align-items: center; background: linear-gradient(to bottom, rgba(10,10,10,0.98), transparent); backdrop-filter: blur(4px); }
+  .nav-logo { display: flex; align-items: center; gap: 12px; text-decoration: none; }
+  .nav-logo img { height: 52px; width: auto; }
+  .nav-logo-text { font-family: var(--display); font-size: 1.1rem; letter-spacing: 0.1em; color: var(--white); line-height: 1.1; }
+  .nav-logo-text span { color: var(--red); display: block; }
+  .nav-links { display: flex; gap: 36px; list-style: none; }
+  .nav-links a { font-family: var(--mono); font-size: 0.75rem; letter-spacing: 0.15em; color: var(--gray); text-decoration: none; text-transform: uppercase; transition: color 0.2s; }
+  .nav-links a:hover { color: var(--red); }
+  .red-divider { width: 100%; height: 1px; background: linear-gradient(to right, transparent, var(--red-dim), transparent); }
+  footer { background: var(--deep); border-top: 1px solid rgba(192,57,43,0.2); padding: 60px 48px 40px; }
+  footer > div { max-width: 1200px; margin: 0 auto; display: flex; justify-content: space-between; align-items: flex-start; gap: 40px; flex-wrap: wrap; }
+  .footer-logo img { height: 64px; width: auto; margin-bottom: 12px; display: block; }
+  .footer-logo p { font-size: 0.9rem; color: var(--gray); font-style: italic; max-width: 280px; }
+  .footer-links h4 { font-family: var(--mono); font-size: 0.65rem; letter-spacing: 0.2em; color: var(--red); text-transform: uppercase; margin-bottom: 16px; }
+  .footer-links ul { list-style: none; }
+  .footer-links li { margin-bottom: 10px; }
+  .footer-links a { font-size: 0.9rem; color: var(--gray); text-decoration: none; transition: color 0.2s; }
+  .footer-links a:hover { color: var(--white); }
+  .footer-bottom { max-width: 1200px; margin: 40px auto 0; padding-top: 24px; border-top: 1px solid rgba(255,255,255,0.05); font-family: var(--mono); font-size: 0.65rem; color: rgba(136,136,136,0.4); letter-spacing: 0.1em; display: flex; justify-content: space-between; flex-wrap: wrap; gap: 12px; }
+  @keyframes fadeUp { from { opacity: 0; transform: translateY(24px); } to { opacity: 1; transform: translateY(0); } }
+  .reveal { opacity: 0; transform: translateY(32px); transition: opacity 0.7s ease, transform 0.7s ease; }
+  .reveal.visible { opacity: 1; transform: translateY(0); }
+  @media (max-width: 768px) { nav { padding: 12px 24px; } .nav-links { display: none; } footer { padding: 40px 24px 24px; } }
+
+
+  .post-layout { display: grid; grid-template-columns: 1fr 320px; gap: 60px; max-width: 1200px; margin: 0 auto; padding: 120px 48px 80px; align-items: start; }
+  .post-main {}
+  .post-header { margin-bottom: 48px; }
+  .post-tag { font-family: var(--mono); font-size: 0.65rem; letter-spacing: 0.2em; color: var(--red); text-transform: uppercase; margin-bottom: 20px; display: block; }
+  .post-title { font-family: var(--display); font-size: clamp(2.4rem, 5vw, 4.5rem); color: var(--white); letter-spacing: 0.02em; line-height: 0.95; margin-bottom: 24px; }
+  .post-meta { font-family: var(--mono); font-size: 0.65rem; color: rgba(136,136,136,0.6); letter-spacing: 0.1em; display: flex; gap: 24px; margin-bottom: 40px; }
+  .post-divider { width: 60px; height: 2px; background: var(--red); margin-bottom: 40px; }
+  .post-body { font-size: 1.1rem; line-height: 1.85; color: var(--light); }
+  .post-body p { margin-bottom: 1.4em; }
+  .post-body h2 { font-family: var(--display); font-size: 2rem; color: var(--white); letter-spacing: 0.04em; margin: 2.5em 0 0.8em; line-height: 1; }
+  .post-body strong { color: var(--white); font-weight: 600; }
+  .post-body em { font-style: italic; color: var(--gray); }
+  .post-share { margin-top: 60px; padding-top: 40px; border-top: 1px solid rgba(255,255,255,0.08); }
+  .post-share h3 { font-family: var(--mono); font-size: 0.7rem; letter-spacing: 0.2em; color: var(--red); text-transform: uppercase; margin-bottom: 20px; }
+  .share-buttons { display: flex; gap: 12px; flex-wrap: wrap; }
+  .share-btn { display: inline-flex; align-items: center; gap: 8px; padding: 10px 20px; font-family: var(--mono); font-size: 0.7rem; letter-spacing: 0.12em; text-transform: uppercase; text-decoration: none; border: 1px solid rgba(255,255,255,0.12); color: var(--gray); cursor: pointer; background: none; transition: all 0.2s; }
+  .share-btn:hover { border-color: var(--red); color: var(--red); }
+  .back-link { display: inline-flex; align-items: center; gap: 8px; font-family: var(--mono); font-size: 0.7rem; letter-spacing: 0.15em; color: var(--gray); text-decoration: none; text-transform: uppercase; margin-bottom: 48px; transition: color 0.2s; }
+  .back-link:hover { color: var(--red); }
+  /* SIDEBAR */
+  .post-sidebar { position: sticky; top: 100px; }
+  .sidebar-section { margin-bottom: 48px; }
+  .sidebar-title { font-family: var(--mono); font-size: 0.65rem; letter-spacing: 0.2em; color: var(--red); text-transform: uppercase; margin-bottom: 20px; padding-bottom: 12px; border-bottom: 1px solid rgba(192,57,43,0.3); }
+  .sidebar-post { display: block; padding: 16px 0; border-bottom: 1px solid rgba(255,255,255,0.05); text-decoration: none; transition: padding-left 0.2s; }
+  .sidebar-post:hover { padding-left: 8px; }
+  .sidebar-post-tag { font-family: var(--mono); font-size: 0.6rem; letter-spacing: 0.15em; color: var(--red); text-transform: uppercase; margin-bottom: 6px; }
+  .sidebar-post-title { font-family: var(--display); font-size: 1.1rem; color: var(--white); letter-spacing: 0.02em; line-height: 1.15; margin-bottom: 6px; }
+  .sidebar-post.active .sidebar-post-title { color: var(--gray); }
+  .sidebar-post-date { font-family: var(--mono); font-size: 0.6rem; color: rgba(136,136,136,0.5); letter-spacing: 0.1em; }
+  .sidebar-yt { display: block; background: var(--card); padding: 20px; text-decoration: none; border: 1px solid rgba(192,57,43,0.2); transition: border-color 0.2s; }
+  .sidebar-yt:hover { border-color: var(--red); }
+  .sidebar-yt-label { font-family: var(--mono); font-size: 0.65rem; letter-spacing: 0.15em; color: var(--red); text-transform: uppercase; margin-bottom: 8px; }
+  .sidebar-yt-text { font-size: 0.9rem; color: var(--light); }
+  @media (max-width: 900px) { .post-layout { grid-template-columns: 1fr; padding: 100px 24px 60px; } .post-sidebar { display: none; } }
+
+</style>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-D540WZZMDB"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-D540WZZMDB');
+</script>
+
+<meta name="keywords" content="jiu-jitsu, BJJ">
+<meta property="og:image" content="https://bjjalemdatecnica.com/LOGO.png">
+<link rel="canonical" href="https://bjjalemdatecnica.com/estagnado-no-jiu-jitsu-game-plan.html">
+</head>
+<body>
+
+<nav>
+  <a href="index.html" class="nav-logo">
+    <img src="LOGO.png" alt="BJJ Além da Técnica">
+    <div class="nav-logo-text">BJJ <span>Além da Técnica</span></div>
+  </a>
+  <ul class="nav-links">
+    <li><a href="index.html#canal">Canal</a></li>
+    <li><a href="index.html#blog">Blog</a></li>
+    <li><a href="index.html#patrocinadores">Patrocinadores</a></li>
+    <li><a href="index.html#sugestoes">Sugestões</a></li>
+  </ul>
+</nav>
+
+<div class="post-layout">
+  <main class="post-main">
+    <a href="index.html#blog" class="back-link">← Voltar para o Blog</a>
+    <header class="post-header">
+      <span class="post-tag">Mentalidade • Estratégia</span>
+      <h1 class="post-title">Estagnado no Jiu-Jitsu? Os 3 Erros Que Te Travam e o Game Plan Que Te Destrava</h1>
+      <div class="post-meta">
+        <span>20 de Novembro de 2026</span>
+        <span>9 min de leitura</span>
+      </div>
+      <div class="post-divider"></div>
+    </header>
+    <div class="post-body">
+<p>Quantas vezes você já pensou em dar um tempo do Jiu-Jitsu, ou até largar de vez, porque sentiu que não está evoluindo mais?</p>
+<p>Você treina pra caramba, mas parece que está no mesmo lugar. A faixa não vem, os rolas continuam difíceis, e aquele fogo do começo foi apagando. Muitas vezes isso vem acompanhado de outra sensação: entrar no rola completamente perdido, o cara puxa pra guarda e você fica olhando pro teto tentando lembrar o que fazer.</p>
+<p>Essas duas coisas andam juntas. Neste texto, primeiro eu vou te mostrar os três erros mais comuns que levam ao desânimo e ao burnout. Depois, a ferramenta que mais me ajudou a sair disso: um game plan simples, em três passos.</p>
+<h2>Erro nº 1: colocar a próxima faixa como objetivo principal</h2>
+<p>Eu sei que parece contraintuitivo, mas ouvir isso salvou a minha vida no tatame: pare de treinar pela faixa.</p>
+<p>A faixa é consequência. Quando ela vira o seu grande objetivo, duas coisas ruins acontecem. Quando ela demora, e às vezes demora muito, você desanima porque "não chegou onde queria". E quando ela finalmente vem, duas ou três semanas depois bate um vazio do caralho, porque aquele objetivo que te tirava da cama acabou.</p>
+<p>Eu já vi faixa azul virar roxa e, duas semanas depois, perguntar: "E agora? Pra que tudo isso?" É real. A faixa não segura motivação por muito tempo.</p>
+<p>Então tira a faixa do pedestal. Deixa ela vir quando tiver que vir. Você vai curtir muito mais quando acontecer.</p>
+<h2>Erro nº 2: não saber medir o próprio progresso</h2>
+<p>A sensação de "não tô evoluindo" quase sempre é só uma sensação. Na maioria das vezes você evoluiu muito e não percebeu. Por quê? Porque a gente não faz autoavaliação de verdade.</p>
+<p>Sem um método pra medir o seu Jiu-Jitsu, você nunca vai enxergar o progresso. É como querer emagrecer sem subir na balança nem tirar foto.</p>
+<p>A ideia é simples. Liste as técnicas que você conhece por categoria: quedas, ataques por cima, passagens de guarda, defesas de finalização, guardas e raspagens. Depois dê uma nota de 1 a 4 pra cada uma:</p>
+<ul><li><strong>1:</strong> você conhece a técnica, mas não lembra como executar sem forçar a memória.</li><li><strong>2:</strong> conhece e às vezes acerta em quem é menos graduado.</li><li><strong>3:</strong> acerta bastante nos menos graduados e às vezes em alguém do seu nível.</li><li><strong>4:</strong> acerta em gente mais graduada que você.</li></ul>
+<p>Refaça essa lista de tempos em tempos e compare. Aquela raspagem que era 1 e virou 3 é progresso concreto, mesmo que a faixa continue a mesma.</p>
+<h2>Erro nº 3: medir progresso por finalizar ou ser finalizado</h2>
+<p>Esse é o maior veneno. Se o seu termômetro é "hoje finalizei três e não bati nenhuma vez", você vai parar de evoluir.</p>
+<p>Pra proteger o ego, você deixa de tentar coisa nova. Fica na zona de conforto, só com quem você sabe que passa, só contra quem você já domina. E o seu Jiu-Jitsu vira um museu: bonito, mas parado no tempo.</p>
+<p><strong>Rola não é competição. Rola é laboratório.</strong></p>
+<p>Antes de cada rola, pergunte: "O que eu quero testar hoje contra essa pessoa?" Quero tentar entrar numa guarda nova? Treinar saída das costas começando em desvantagem? Ver se consigo segurar a montada por dois minutos contra um cara mais forte?</p>
+<p>Se você entrou com uma missão e cumpriu metade dela, você evoluiu. Mesmo que tenha batido várias vezes no caminho.</p>
+<h2>Dicas extras pra manter a chama acesa por anos</h2>
+<p><strong>Troque o "tenho que" por "quero treinar hoje".</strong> Um dia ruim no tatame ainda é melhor que um dia bom no sofá.</p>
+<p><strong>Trabalhe em mini-ciclos de 6 a 8 semanas.</strong> Escolha um foco: "nas próximas seis semanas, só guarda laço" ou "só defesa de costas". Isso dá direção e uma sensação constante de progresso, porque você vê a evolução numa área específica.</p>
+<p><strong>Celebre as pequenas vitórias.</strong> Conseguiu ver uma gota de suor no rosto do faixa preta? Comemora. Isso é enorme.</p>
+<p><strong>Lembre por que você começou.</strong> Saúde, amigos, autoconfiança, vencer um medo? A faixa é só um pedaço de pano. O motivo real é muito maior.</p>
+<h2>Como aplicar já no próximo treino</h2>
+<p>Se quiser um roteiro simples: antes de sair de casa, escreva no celular uma missão pro treino. Depois de cada rola, avalie se cumpriu pelo menos parte dela. No fim do mês, pegue a sua lista de técnicas e atualize as notas. Em poucas semanas, a sensação de estar parado começa a dar lugar a evidência de que você está andando.</p>
+<p>E se o desânimo vier mesmo assim, lembre que fase ruim faz parte de qualquer jornada longa. O importante é não tomar uma decisão definitiva num momento passageiro.</p>
+<h2>Do laboratório ao plano: monte o seu game plan</h2>
+<p>Se o rola é laboratório, você precisa de um roteiro de experimentos. A maioria da galera treina rolando no aleatório, sem norte, só reagindo. Enquanto isso, quem tem um game plan de verdade domina o rola inteiro.</p>
+<p>O mapa que eu uso é o que a RosieRollz, faixa-preta do André Galvão, chama de "The Anatomy of a Gameplan", a anatomia de um plano de jogo. É o mais simples e mais honesto que eu conheço. Pega papel e caneta.</p>
+<h2>As 3 situações que cobrem a luta inteira</h2>
+<p>Pensa comigo: no rola você vive o tempo todo só três grandes situações:</p>
+<ul><li>Jogo em pé.</li><li>Jogo por baixo.</li><li>Jogo por cima.</li></ul>
+<p>E dentro de cada uma existem dois ou três caminhos claros. Vamos passo a passo.</p>
+<h2>Passo 1: o jogo em pé e a primeira decisão</h2>
+<p>Quando o rola começa, você tem exatamente duas opções: puxar pra guarda ou tentar derrubar. Não tem meio-termo. Ficar parado esperando pra ver o que acontece não é plano, é preguiça.</p>
+<p>Você precisa escolher UMA estratégia e investir nela. Tem gente que decide "meu jogo é por baixo", senta, fecha a guarda e começa a sequência em três segundos. Tem gente que decide "meu jogo é por cima" e derruba ou morre tentando, e quinze segundos depois já está estabilizando.</p>
+<p>Ter as duas opções é legal. Ter UMA afiada é mortal. Na prática: se você puxa, treine uma ou duas puxadas que já caem na sua guarda preferida. Se derruba, treine uma ou duas quedas até pegar todo mundo.</p>
+<h2>Passo 2: o jogo por baixo</h2>
+<p>A luta foi pro chão e você está por baixo, porque sentou ou porque foi derrubado. Aqui o plano tem três caminhos. Escolha um ou dois e vire especialista.</p>
+<p>Pra fins didáticos, imagina que a sua guarda favorita é a meia-guarda e monte o sistema a partir dela:</p>
+<ul><li><strong>Opção A, raspar:</strong> tenha pelo menos duas raspagens sólidas da sua guarda favorita.</li><li><strong>Opção B, finalizar da guarda:</strong> aprenda um ou dois ataques dali.</li><li><strong>Opção C, ir pras costas e finalizar.</strong></li></ul>
+<p>Dica de ouro: você não precisa saber 47 raspagens. Fique bom de verdade em duas ou três. É assim que começa.</p>
+<h2>Passo 3: o jogo por cima</h2>
+<p>Você chegou aqui porque derrubou ou raspou. O plano é ainda mais simples.</p>
+<p><strong>Primeiro, estabilizar.</strong> Sem estabilidade não tem passagem, não tem finalização, não tem nada. Exceções existem, mas o foco aqui é o básico. Construir um Jiu-Jitsu baseado em estabilização e controle posicional te faz evoluir muito mais rápido do que depender de atletismo, agilidade e ataques pouco ortodoxos que pegam a pessoa desprevenida uma ou duas vezes.</p>
+<p><strong>Depois, passar.</strong> De novo pra fins didáticos, imagina que o seu jogo por cima também parte da meia-guarda. Dali, com uma passagem de tripé, você vai direto pra montada. Ou usa um knee cut e vai pro cem quilos, que depois te leva pra montada.</p>
+<p><strong>Por fim, finalizar.</strong> Da montada, tenha duas ou três finalizações, por exemplo armlock, estrangulamento de gola cruzada e katagatame. E fique atento: muitas vezes, depois da queda, o colega resiste, tira as costas do tatame e vira de costas pra você. É a hora de pegar as costas e seguir pras suas finalizações.</p>
+<p>O importante é nunca "passar guarda por passar". Você passa com objetivo: chegar na posição onde estão os seus melhores ataques, ou cair nas costas e finalizar.</p>
+<h2>O mapa completo na prática</h2>
+<p>Juntando tudo: em pé você puxa ou derruba. Por baixo, raspa, finaliza ou vai pras costas. Por cima, estabiliza, passa e finaliza. São literalmente quatro ou cinco decisões que cobrem praticamente todas as situações de um rola.</p>
+<h2>Como montar o SEU game plan hoje</h2>
+<p>Pegue papel e caneta e desenhe esse fluxograma. Em cada caixa, escreva as posições e técnicas que você já conhece. Onde ficar em branco, é o que você precisa aprender. Pronto, você tem um plano de estudo.</p>
+<h2>Como treinar o plano sem virar refém do ego</h2>
+<p>Na academia, comece com faixas brancas ou colegas com bem menos experiência que você. Trabalhe UM aspecto do jogo por vez. Puxe pra guarda e tente raspar. Deu certo? Ache um jeito de voltar a fazer guarda pra mesma pessoa e repita.</p>
+<p>Lembre-se: você não está tentando vencer o rola. Está usando um colega numa situação real de rola pra afiar uma habilidade específica. Se ele passou a sua guarda e te finalizou, não tem problema. Chame pra guarda de novo e tente raspar. Quantas vezes for preciso. Esqueça o ego, aquela sessão é pra aprender.</p>
+<p>Treine assim por 90 dias seguidos, mudando o aspecto do plano conforme você evolui em cada parte. A sensação é de que o seu Jiu-Jitsu ganhou duas faixas em três meses.</p>
+<h2>O desafio</h2>
+<p>Nos próximos cinco treinos, use só o seu game plan novo e entre em cada rola com uma missão tirada dele. Nada de inventar mil técnicas. Depois avalie: ficou mais fácil decidir o que fazer? O rola fluiu melhor? Cumpriu pelo menos metade da missão? Se sim, você evoluiu, mesmo que tenha batido no caminho.</p>
+<h2>Resumo da ópera</h2>
+<ul><li>Não treine pela faixa. Deixe ela vir como consequência.</li><li>Meça o seu progresso com um método, não com sensação.</li><li>Trate o rola como laboratório, não como competição.</li><li>Monte um game plan com o jogo em pé, por baixo e por cima.</li><li>Treine uma parte do plano por vez, por 90 dias, com parceiros menos experientes no começo.</li></ul>
+<p>Bora parar de rolar no aleatório e começar a rolar com uma bússola. Assim você treina 5, 10, 15 anos com o mesmo brilho no olho do primeiro dia.</p>
+<p>Nos vemos no tatame. Oss!</p>
+<h2>Assista aos vídeos</h2>
+<div style="position:relative;padding-bottom:56.25%;height:0;overflow:hidden;margin-bottom:1.4em"><iframe style="position:absolute;top:0;left:0;width:100%;height:100%;border:0" src="https://www.youtube.com/embed/qpiyeycjEgM" title="Estagnado no Jiu-Jitsu? Os 3 Erros Que Te Travam e o Game Plan Que Te Destrava" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
+<div style="position:relative;padding-bottom:56.25%;height:0;overflow:hidden;margin-bottom:1.4em"><iframe style="position:absolute;top:0;left:0;width:100%;height:100%;border:0" src="https://www.youtube.com/embed/mukQHEFFGzA" title="Estagnado no Jiu-Jitsu? Os 3 Erros Que Te Travam e o Game Plan Que Te Destrava" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
+<div style="background:var(--card);border:1px solid rgba(192,57,43,0.3);padding:28px;margin-top:2em"><p style="font-family:var(--display);font-size:1.6rem;color:var(--white);margin-bottom:0.4em">Receba conteúdo como esse no seu e-mail</p><p>Toda semana eu mando pra newsletter um conteúdo pensado pra quem treina de verdade, tem trabalho, família e quer evoluir no tatame sem enrolação. É de graça.</p><p><a href="/newsletter" class="share-btn" style="color:var(--red);border-color:var(--red)">Quero entrar na newsletter →</a></p></div>
+    </div>
+    <div class="post-share">
+      <h3>Compartilhar este post</h3>
+      <div class="share-buttons">
+        <a href="https://wa.me/?text=Estagnado no Jiu-Jitsu? Os 3 Erros Que Te Travam e o Game Plan Que Te Destrava%20https://bjjalemdatecnica.com/estagnado-no-jiu-jitsu-game-plan.html" target="_blank" class="share-btn">📱 WhatsApp</a>
+        <a href="https://twitter.com/intent/tweet?text=Estagnado no Jiu-Jitsu? Os 3 Erros Que Te Travam e o Game Plan Que Te Destrava&url=https://bjjalemdatecnica.com/estagnado-no-jiu-jitsu-game-plan.html" target="_blank" class="share-btn">𝕏 Twitter</a>
+        <button class="share-btn" onclick="navigator.clipboard.writeText('https://bjjalemdatecnica.com/estagnado-no-jiu-jitsu-game-plan.html');this.textContent='✓ Copiado!'">🔗 Copiar link</button>
+      </div>
+    </div>
+  </main>
+  <aside class="post-sidebar">
+<div class="sidebar-section">
+<div class="sidebar-title">Outros Posts</div>
+<a href="4-pilares-jiu-jitsu-ilha-deserta.html" class="sidebar-post">
+<div class="sidebar-post-tag">Fundamentos • Filosofia</div>
+<div class="sidebar-post-title">Os 4 Pilares Para Dominar Qualquer Rola: o Jiu-Jitsu da Ilha Deserta</div>
+<div class="sidebar-post-date">Novembro 2026 · 5 min</div>
+</a>
+<a href="autoavaliacao-e-fraquezas-no-jiu-jitsu.html" class="sidebar-post">
+<div class="sidebar-post-tag">Mentalidade • Evolução</div>
+<div class="sidebar-post-title">Como Descobrir e Corrigir Suas Fraquezas no Jiu-Jitsu: Autoavaliação e o Mindset do Cobrinha</div>
+<div class="sidebar-post-date">Novembro 2026 · 8 min</div>
+</a>
+<a href="4-principios-do-jiu-jitsu-faixa-branca.html" class="sidebar-post">
+<div class="sidebar-post-tag">Fundamentos • Filosofia</div>
+<div class="sidebar-post-title">Os 4 Princípios Que Todo Faixa Branca Precisa Saber (Dentro e Fora do Tatame)</div>
+<div class="sidebar-post-date">Novembro 2026 · 7 min</div>
+</a>
+<a href="filho-no-jiu-jitsu-o-que-todo-pai-precisa-saber.html" class="sidebar-post">
+<div class="sidebar-post-tag">Família • Jiu-Jitsu Infantil</div>
+<div class="sidebar-post-title">Coloquei Meu Filho no Jiu-Jitsu: O Que Todo Pai Precisa Saber Antes</div>
+<div class="sidebar-post-date">Novembro 2026 · 7 min</div>
+</a>
+</div>
+<div class="sidebar-section">
+<div class="sidebar-title">Canal no YouTube</div>
+<a href="https://www.youtube.com/@BJJAlemDaTecnica" target="_blank" class="sidebar-yt">
+<div class="sidebar-yt-label">▶ Assista também</div>
+<div class="sidebar-yt-text">Novos vídeos toda semana no canal BJJ Além da Técnica</div>
+</a>
+</div>
+</aside>
+
+</div>
+<div class="red-divider"></div>
+
+<footer>
+  <div>
+    <div class="footer-logo">
+      <img src="LOGO.png" alt="BJJ Além da Técnica">
+      <p>O tatame como escola de vida. Técnica, filosofia e tudo que está além do movimento.</p>
+    </div>
+    <div class="footer-links">
+      <h4>Navegação</h4>
+      <ul>
+        <li><a href="index.html#canal">Último Vídeo</a></li>
+        <li><a href="index.html#blog">Blog</a></li>
+        <li><a href="index.html#patrocinadores">Patrocinadores</a></li>
+        <li><a href="index.html#sugestoes">Sugestões</a></li>
+      </ul>
+    </div>
+    <div class="footer-links">
+      <h4>Contato</h4>
+      <ul>
+        <li><a href="https://www.youtube.com/@BJJAlemDaTecnica" target="_blank">YouTube</a></li>
+        <li><a href="mailto:contato@bjjalemdatecnica.com">contato@bjjalemdatecnica.com</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span>© 2026 BJJ Além da Técnica — bjjalemdatecnica.com</span>
+    <span>OSS</span>
+  </div>
+</footer>
+<script>
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(el => { if (el.isIntersecting) el.target.classList.add('visible'); });
+  }, { threshold: 0.1 });
+  document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+</script>
+
+</body>
+</html>
